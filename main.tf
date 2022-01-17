@@ -44,9 +44,10 @@ resource "google_bigquery_table" "hive_table" {
     to query:
     bq query --nouse_legacy_sql "select * from hive_store.messages"
     */
-  dataset_id = google_bigquery_dataset.hive_store.dataset_id
-  project    = var.project
-  table_id   = "messages"
+  dataset_id          = google_bigquery_dataset.hive_store.dataset_id
+  project             = var.project
+  table_id            = "messages"
+  deletion_protection = false
   external_data_configuration {
     autodetect    = false
     source_uris   = ["gs://${google_storage_bucket.bucket.name}/publish/*"]
@@ -63,6 +64,21 @@ resource "google_bigquery_table" "hive_table" {
         "name": "column1",
         "type": "STRING",
         "mode": "NULLABLE"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "dt",
+        "type": "STRING"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "hr",
+        "type": "STRING"
+    },
+    {
+        "mode": "NULLABLE",
+        "name": "min",
+        "type": "STRING"
     }
 ]
   EOF
