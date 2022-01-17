@@ -1,0 +1,2043 @@
+2022/01/17 15:36:02 [WARN] Invalid log level: "DBUG". Defaulting to level: TRACE. Valid levels are: [TRACE DEBUG INFO WARN ERROR]
+2022/01/17 15:36:02 [INFO] Terraform version: 0.14.9
+2022/01/17 15:36:02 [INFO] Go runtime version: go1.16.2
+2022/01/17 15:36:02 [INFO] CLI args: []string{"/usr/local/bin/terraform", "apply", "-var", "project=msm-groupdata-datalake-dev", "-var", "region=europe-west2"}
+2022/01/17 15:36:02 [DEBUG] Attempting to open CLI config file: /Users/jamie.thomson/.terraformrc
+2022/01/17 15:36:02 [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2022/01/17 15:36:02 [DEBUG] ignoring non-existing provider search directory terraform.d/plugins
+2022/01/17 15:36:02 [DEBUG] ignoring non-existing provider search directory /Users/jamie.thomson/.terraform.d/plugins
+2022/01/17 15:36:02 [DEBUG] ignoring non-existing provider search directory /Users/jamie.thomson/Library/Application Support/io.terraform/plugins
+2022/01/17 15:36:02 [DEBUG] ignoring non-existing provider search directory /Library/Application Support/io.terraform/plugins
+2022/01/17 15:36:02 [INFO] CLI command args: []string{"apply", "-var", "project=msm-groupdata-datalake-dev", "-var", "region=europe-west2"}
+2022/01/17 15:36:02 [WARN] Invalid log level: "DBUG". Defaulting to level: TRACE. Valid levels are: [TRACE DEBUG INFO WARN ERROR]
+2022/01/17 15:36:02 [TRACE] Meta.Backend: no config given or present on disk, so returning nil config
+2022/01/17 15:36:02 [TRACE] Meta.Backend: backend has not previously been initialized in this working directory
+2022/01/17 15:36:02 [DEBUG] New state was assigned lineage "cd9078aa-bf9b-65ca-72dc-b837358d3d21"
+2022/01/17 15:36:02 [TRACE] Meta.Backend: using default local state only (no backend configuration, and no existing initialized backend)
+2022/01/17 15:36:02 [TRACE] Meta.Backend: instantiated backend of type <nil>
+2022/01/17 15:36:02 [TRACE] providercache.fillMetaCache: scanning directory .terraform/providers
+2022/01/17 15:36:02 [TRACE] getproviders.SearchLocalDirectory: .terraform/providers is a symlink to .terraform/providers
+2022/01/17 15:36:02 [TRACE] getproviders.SearchLocalDirectory: found registry.terraform.io/hashicorp/google v4.5.0 for darwin_amd64 at .terraform/providers/registry.terraform.io/hashicorp/google/4.5.0/darwin_amd64
+2022/01/17 15:36:02 [TRACE] providercache.fillMetaCache: including .terraform/providers/registry.terraform.io/hashicorp/google/4.5.0/darwin_amd64 as a candidate package for registry.terraform.io/hashicorp/google 4.5.0
+2022/01/17 15:36:02 [DEBUG] checking for provisioner in "."
+2022/01/17 15:36:02 [DEBUG] checking for provisioner in "/usr/local/bin"
+2022/01/17 15:36:02 [INFO] Failed to read plugin lock file .terraform/plugins/darwin_amd64/lock.json: open .terraform/plugins/darwin_amd64/lock.json: no such file or directory
+2022/01/17 15:36:02 [TRACE] Meta.Backend: backend <nil> does not support operations, so wrapping it in a local backend
+2022/01/17 15:36:02 [INFO] backend/local: starting Apply operation
+2022/01/17 15:36:02 [TRACE] backend/local: requesting state manager for workspace "default"
+2022/01/17 15:36:02 [TRACE] backend/local: state manager for workspace "default" will:
+ - read initial snapshot from terraform.tfstate
+ - write new snapshots to terraform.tfstate
+ - create any backup at terraform.tfstate.backup
+2022/01/17 15:36:02 [TRACE] backend/local: requesting state lock for workspace "default"
+2022/01/17 15:36:02 [TRACE] statemgr.Filesystem: preparing to manage state snapshots at terraform.tfstate
+2022/01/17 15:36:02 [TRACE] statemgr.Filesystem: existing snapshot has lineage "ec056c69-30d5-0380-99c3-7c5594cf7f80" serial 29
+2022/01/17 15:36:02 [TRACE] statemgr.Filesystem: locking terraform.tfstate using fcntl flock
+2022/01/17 15:36:02 [TRACE] statemgr.Filesystem: writing lock metadata to .terraform.tfstate.lock.info
+2022/01/17 15:36:02 [TRACE] backend/local: reading remote state for workspace "default"
+2022/01/17 15:36:02 [TRACE] statemgr.Filesystem: reading latest snapshot from terraform.tfstate
+2022/01/17 15:36:02 [TRACE] statemgr.Filesystem: read snapshot with lineage "ec056c69-30d5-0380-99c3-7c5594cf7f80" serial 29
+2022/01/17 15:36:02 [TRACE] backend/local: retrieving local state snapshot for workspace "default"
+2022/01/17 15:36:02 [TRACE] backend/local: building context for current working directory
+2022/01/17 15:36:02 [TRACE] terraform.NewContext: starting
+2022/01/17 15:36:02 [TRACE] terraform.NewContext: loading provider schemas
+2022/01/17 15:36:02 [TRACE] LoadSchemas: retrieving schema for provider type "registry.terraform.io/hashicorp/google"
+2022-01-17T15:36:02.431Z [INFO]  plugin: configuring client automatic mTLS
+2022-01-17T15:36:02.462Z [DEBUG] plugin: starting plugin: path=.terraform/providers/registry.terraform.io/hashicorp/google/4.5.0/darwin_amd64/terraform-provider-google_v4.5.0_x5 args=[.terraform/providers/registry.terraform.io/hashicorp/google/4.5.0/darwin_amd64/terraform-provider-google_v4.5.0_x5]
+2022-01-17T15:36:02.467Z [DEBUG] plugin: plugin started: path=.terraform/providers/registry.terraform.io/hashicorp/google/4.5.0/darwin_amd64/terraform-provider-google_v4.5.0_x5 pid=54097
+2022-01-17T15:36:02.467Z [DEBUG] plugin: waiting for RPC address: path=.terraform/providers/registry.terraform.io/hashicorp/google/4.5.0/darwin_amd64/terraform-provider-google_v4.5.0_x5
+2022-01-17T15:36:02.492Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: configuring server automatic mTLS: timestamp=2022-01-17T15:36:02.492Z
+2022-01-17T15:36:02.532Z [DEBUG] plugin: using plugin: version=5
+2022-01-17T15:36:02.532Z [DEBUG] plugin.terraform-provider-google_v4.5.0_x5: plugin address: address=/var/folders/6y/709fn7mx2_q8r5br55hztqnw0000gp/T/plugin686368620 network=unix timestamp=2022-01-17T15:36:02.532Z
+2022/01/17 15:36:02 [TRACE] GRPCProvider: GetSchema
+2022-01-17T15:36:02.576Z [TRACE] plugin.stdio: waiting for stdio data
+2022/01/17 15:36:02 [TRACE] GRPCProvider: Close
+2022-01-17T15:36:02.634Z [WARN]  plugin.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = transport is closing"
+2022-01-17T15:36:02.637Z [DEBUG] plugin: plugin process exited: path=.terraform/providers/registry.terraform.io/hashicorp/google/4.5.0/darwin_amd64/terraform-provider-google_v4.5.0_x5 pid=54097
+2022-01-17T15:36:02.637Z [DEBUG] plugin: plugin exited
+2022/01/17 15:36:02 [TRACE] terraform.NewContext: complete
+2022/01/17 15:36:02 [TRACE] backend/local: finished building terraform.Context
+2022/01/17 15:36:02 [TRACE] backend/local: requesting interactive input, if necessary
+2022/01/17 15:36:02 [TRACE] Context.Input: Prompting for provider arguments
+2022/01/17 15:36:02 [TRACE] Context.Input: Provider provider.google declared at main.tf:12,1-18
+2022/01/17 15:36:02 [TRACE] Context.Input: Input for provider.google: map[string]cty.Value{}
+2022/01/17 15:36:02 [TRACE] backend/local: running validation operation
+2022/01/17 15:36:02 [INFO] terraform: building graph: GraphTypeValidate
+2022/01/17 15:36:02 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2022/01/17 15:36:02 [TRACE] ConfigTransformer: Starting for path:
+2022/01/17 15:36:02 [TRACE] Completed graph transform *terraform.ConfigTransformer with new graph:
+  google_bigquery_dataset.hive_store - *terraform.NodeValidatableResource
+  google_bigquery_table.hive_table - *terraform.NodeValidatableResource
+  google_storage_bucket.bucket - *terraform.NodeValidatableResource
+  google_storage_bucket_object.fake_message - *terraform.NodeValidatableResource
+  ------
+2022/01/17 15:36:02 [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2022/01/17 15:36:02 [TRACE] Completed graph transform *terraform.RootVariableTransformer with new graph:
+  google_bigquery_dataset.hive_store - *terraform.NodeValidatableResource
+  google_bigquery_table.hive_table - *terraform.NodeValidatableResource
+  google_storage_bucket.bucket - *terraform.NodeValidatableResource
+  google_storage_bucket_object.fake_message - *terraform.NodeValidatableResource
+  var.project - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  ------
+2022/01/17 15:36:02 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2022/01/17 15:36:02 [TRACE] Completed graph transform *terraform.ModuleVariableTransformer (no changes)
+2022/01/17 15:36:02 [TRACE] Executing graph transform *terraform.LocalTransformer
+2022/01/17 15:36:02 [TRACE] Completed graph transform *terraform.LocalTransformer (no changes)
+2022/01/17 15:36:02 [TRACE] Executing graph transform *terraform.OutputTransformer
+2022/01/17 15:36:02 [TRACE] Completed graph transform *terraform.OutputTransformer (no changes)
+2022/01/17 15:36:02 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceTransformer
+2022/01/17 15:36:02 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceTransformer (no changes)
+2022/01/17 15:36:02 [TRACE] Executing graph transform *terraform.StateTransformer
+2022/01/17 15:36:02 [TRACE] StateTransformer: state is empty, so nothing to do
+2022/01/17 15:36:02 [TRACE] Completed graph transform *terraform.StateTransformer (no changes)
+2022/01/17 15:36:02 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2022/01/17 15:36:02 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2022/01/17 15:36:02 [TRACE] Executing graph transform *terraform.OrphanOutputTransformer
+2022/01/17 15:36:02 [TRACE] Completed graph transform *terraform.OrphanOutputTransformer (no changes)
+2022/01/17 15:36:02 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2022/01/17 15:36:02 [TRACE] AttachResourceConfigTransformer: attaching to "google_bigquery_dataset.hive_store" (*terraform.NodeValidatableResource) config from main.tf:36,1-48
+2022/01/17 15:36:02 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to google_bigquery_dataset.hive_store
+2022/01/17 15:36:02 [TRACE] AttachResourceConfigTransformer: attaching to "google_bigquery_table.hive_table" (*terraform.NodeValidatableResource) config from main.tf:42,1-46
+2022/01/17 15:36:02 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to google_bigquery_table.hive_table
+2022/01/17 15:36:02 [TRACE] AttachResourceConfigTransformer: attaching to "google_storage_bucket.bucket" (*terraform.NodeValidatableResource) config from main.tf:16,1-42
+2022/01/17 15:36:02 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to google_storage_bucket.bucket
+2022/01/17 15:36:02 [TRACE] AttachResourceConfigTransformer: attaching to "google_storage_bucket_object.fake_message" (*terraform.NodeValidatableResource) config from main.tf:22,1-55
+2022/01/17 15:36:02 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to google_storage_bucket_object.fake_message
+2022/01/17 15:36:02 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
+2022/01/17 15:36:02 [TRACE] Executing graph transform *terraform.MissingProvisionerTransformer
+2022/01/17 15:36:02 [TRACE] Completed graph transform *terraform.MissingProvisionerTransformer (no changes)
+2022/01/17 15:36:02 [TRACE] Executing graph transform *terraform.ProvisionerTransformer
+2022/01/17 15:36:02 [TRACE] Completed graph transform *terraform.ProvisionerTransformer (no changes)
+2022/01/17 15:36:02 [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2022/01/17 15:36:02 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2022/01/17 15:36:02 [TRACE] ProviderConfigTransformer: attaching to "provider[\"registry.terraform.io/hashicorp/google\"]" provider configuration from main.tf:12,1-18
+2022/01/17 15:36:02 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+  google_bigquery_dataset.hive_store - *terraform.NodeValidatableResource
+  google_bigquery_table.hive_table - *terraform.NodeValidatableResource
+  google_storage_bucket.bucket - *terraform.NodeValidatableResource
+  google_storage_bucket_object.fake_message - *terraform.NodeValidatableResource
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  var.project - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  ------
+2022/01/17 15:36:02 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2022/01/17 15:36:02 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer (no changes)
+2022/01/17 15:36:02 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2022/01/17 15:36:02 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/google"] serving google_storage_bucket.bucket
+2022/01/17 15:36:02 [DEBUG] ProviderTransformer: "google_storage_bucket.bucket" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2022/01/17 15:36:02 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/google"] serving google_storage_bucket_object.fake_message
+2022/01/17 15:36:02 [DEBUG] ProviderTransformer: "google_storage_bucket_object.fake_message" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2022/01/17 15:36:02 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/google"] serving google_bigquery_dataset.hive_store
+2022/01/17 15:36:02 [DEBUG] ProviderTransformer: "google_bigquery_dataset.hive_store" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2022/01/17 15:36:02 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/google"] serving google_bigquery_table.hive_table
+2022/01/17 15:36:02 [DEBUG] ProviderTransformer: "google_bigquery_table.hive_table" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2022/01/17 15:36:02 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer with new graph:
+  google_bigquery_dataset.hive_store - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_bigquery_table.hive_table - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_storage_bucket.bucket - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_storage_bucket_object.fake_message - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  var.project - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  ------
+2022/01/17 15:36:02 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2022/01/17 15:36:02 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer (no changes)
+2022/01/17 15:36:02 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ParentProviderTransformer
+2022/01/17 15:36:02 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ParentProviderTransformer (no changes)
+2022/01/17 15:36:02 [TRACE] Completed graph transform *terraform.graphTransformerMulti with new graph:
+  google_bigquery_dataset.hive_store - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_bigquery_table.hive_table - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_storage_bucket.bucket - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_storage_bucket_object.fake_message - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  var.project - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  ------
+2022/01/17 15:36:02 [TRACE] Executing graph transform *terraform.RemovedModuleTransformer
+2022/01/17 15:36:02 [TRACE] Completed graph transform *terraform.RemovedModuleTransformer (no changes)
+2022/01/17 15:36:02 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2022/01/17 15:36:02 [TRACE] AttachSchemaTransformer: attaching resource schema to google_bigquery_table.hive_table
+2022/01/17 15:36:02 [TRACE] AttachSchemaTransformer: attaching provider config schema to provider["registry.terraform.io/hashicorp/google"]
+2022/01/17 15:36:02 [TRACE] AttachSchemaTransformer: attaching resource schema to google_storage_bucket.bucket
+2022/01/17 15:36:02 [TRACE] AttachSchemaTransformer: attaching resource schema to google_storage_bucket_object.fake_message
+2022/01/17 15:36:02 [TRACE] AttachSchemaTransformer: attaching resource schema to google_bigquery_dataset.hive_store
+2022/01/17 15:36:02 [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
+2022/01/17 15:36:02 [TRACE] Executing graph transform *terraform.ModuleExpansionTransformer
+2022/01/17 15:36:02 [TRACE] Completed graph transform *terraform.ModuleExpansionTransformer (no changes)
+2022/01/17 15:36:02 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2022/01/17 15:36:02 [DEBUG] ReferenceTransformer: "var.region" references: []
+2022/01/17 15:36:02 [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/hashicorp/google\"]" references: [var.region]
+2022/01/17 15:36:02 [DEBUG] ReferenceTransformer: "google_storage_bucket.bucket" references: [var.project var.project]
+2022/01/17 15:36:02 [DEBUG] ReferenceTransformer: "google_storage_bucket_object.fake_message" references: [google_storage_bucket.bucket]
+2022/01/17 15:36:02 [DEBUG] ReferenceTransformer: "google_bigquery_dataset.hive_store" references: [var.project]
+2022/01/17 15:36:02 [DEBUG] ReferenceTransformer: "google_bigquery_table.hive_table" references: [google_storage_bucket_object.fake_message var.project google_bigquery_dataset.hive_store google_storage_bucket.bucket google_storage_bucket.bucket]
+2022/01/17 15:36:02 [DEBUG] ReferenceTransformer: "var.project" references: []
+2022/01/17 15:36:02 [TRACE] Completed graph transform *terraform.ReferenceTransformer with new graph:
+  google_bigquery_dataset.hive_store - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.project - *terraform.NodeRootVariable
+  google_bigquery_table.hive_table - *terraform.NodeValidatableResource
+    google_bigquery_dataset.hive_store - *terraform.NodeValidatableResource
+    google_storage_bucket.bucket - *terraform.NodeValidatableResource
+    google_storage_bucket_object.fake_message - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.project - *terraform.NodeRootVariable
+  google_storage_bucket.bucket - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.project - *terraform.NodeRootVariable
+  google_storage_bucket_object.fake_message - *terraform.NodeValidatableResource
+    google_storage_bucket.bucket - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.region - *terraform.NodeRootVariable
+  var.project - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  ------
+2022/01/17 15:36:02 [TRACE] Executing graph transform *terraform.AttachDependenciesTransformer
+2022/01/17 15:36:02 [TRACE] Completed graph transform *terraform.AttachDependenciesTransformer (no changes)
+2022/01/17 15:36:02 [TRACE] Executing graph transform *terraform.attachDataResourceDependenciesTransformer
+2022/01/17 15:36:02 [TRACE] Completed graph transform *terraform.attachDataResourceDependenciesTransformer (no changes)
+2022/01/17 15:36:02 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2022/01/17 15:36:02 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2022/01/17 15:36:02 [TRACE] Executing graph transform *terraform.ForcedCBDTransformer
+2022/01/17 15:36:02 [TRACE] Completed graph transform *terraform.ForcedCBDTransformer (no changes)
+2022/01/17 15:36:02 [TRACE] Executing graph transform *terraform.CountBoundaryTransformer
+2022/01/17 15:36:02 [TRACE] Completed graph transform *terraform.CountBoundaryTransformer with new graph:
+  google_bigquery_dataset.hive_store - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.project - *terraform.NodeRootVariable
+  google_bigquery_table.hive_table - *terraform.NodeValidatableResource
+    google_bigquery_dataset.hive_store - *terraform.NodeValidatableResource
+    google_storage_bucket.bucket - *terraform.NodeValidatableResource
+    google_storage_bucket_object.fake_message - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.project - *terraform.NodeRootVariable
+  google_storage_bucket.bucket - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.project - *terraform.NodeRootVariable
+  google_storage_bucket_object.fake_message - *terraform.NodeValidatableResource
+    google_storage_bucket.bucket - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    google_bigquery_dataset.hive_store - *terraform.NodeValidatableResource
+    google_bigquery_table.hive_table - *terraform.NodeValidatableResource
+    google_storage_bucket.bucket - *terraform.NodeValidatableResource
+    google_storage_bucket_object.fake_message - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.project - *terraform.NodeRootVariable
+    var.region - *terraform.NodeRootVariable
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.region - *terraform.NodeRootVariable
+  var.project - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  ------
+2022/01/17 15:36:02 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2022/01/17 15:36:02 [TRACE] Completed graph transform *terraform.CloseProviderTransformer with new graph:
+  google_bigquery_dataset.hive_store - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.project - *terraform.NodeRootVariable
+  google_bigquery_table.hive_table - *terraform.NodeValidatableResource
+    google_bigquery_dataset.hive_store - *terraform.NodeValidatableResource
+    google_storage_bucket.bucket - *terraform.NodeValidatableResource
+    google_storage_bucket_object.fake_message - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.project - *terraform.NodeRootVariable
+  google_storage_bucket.bucket - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.project - *terraform.NodeRootVariable
+  google_storage_bucket_object.fake_message - *terraform.NodeValidatableResource
+    google_storage_bucket.bucket - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    google_bigquery_dataset.hive_store - *terraform.NodeValidatableResource
+    google_bigquery_table.hive_table - *terraform.NodeValidatableResource
+    google_storage_bucket.bucket - *terraform.NodeValidatableResource
+    google_storage_bucket_object.fake_message - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.project - *terraform.NodeRootVariable
+    var.region - *terraform.NodeRootVariable
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.region - *terraform.NodeRootVariable
+  provider["registry.terraform.io/hashicorp/google"] (close) - *terraform.graphNodeCloseProvider
+    google_bigquery_dataset.hive_store - *terraform.NodeValidatableResource
+    google_bigquery_table.hive_table - *terraform.NodeValidatableResource
+    google_storage_bucket.bucket - *terraform.NodeValidatableResource
+    google_storage_bucket_object.fake_message - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  var.project - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  ------
+2022/01/17 15:36:02 [TRACE] Executing graph transform *terraform.CloseRootModuleTransformer
+2022/01/17 15:36:02 [TRACE] Completed graph transform *terraform.CloseRootModuleTransformer with new graph:
+  google_bigquery_dataset.hive_store - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.project - *terraform.NodeRootVariable
+  google_bigquery_table.hive_table - *terraform.NodeValidatableResource
+    google_bigquery_dataset.hive_store - *terraform.NodeValidatableResource
+    google_storage_bucket.bucket - *terraform.NodeValidatableResource
+    google_storage_bucket_object.fake_message - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.project - *terraform.NodeRootVariable
+  google_storage_bucket.bucket - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.project - *terraform.NodeRootVariable
+  google_storage_bucket_object.fake_message - *terraform.NodeValidatableResource
+    google_storage_bucket.bucket - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    google_bigquery_dataset.hive_store - *terraform.NodeValidatableResource
+    google_bigquery_table.hive_table - *terraform.NodeValidatableResource
+    google_storage_bucket.bucket - *terraform.NodeValidatableResource
+    google_storage_bucket_object.fake_message - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.project - *terraform.NodeRootVariable
+    var.region - *terraform.NodeRootVariable
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.region - *terraform.NodeRootVariable
+  provider["registry.terraform.io/hashicorp/google"] (close) - *terraform.graphNodeCloseProvider
+    google_bigquery_dataset.hive_store - *terraform.NodeValidatableResource
+    google_bigquery_table.hive_table - *terraform.NodeValidatableResource
+    google_storage_bucket.bucket - *terraform.NodeValidatableResource
+    google_storage_bucket_object.fake_message - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  root - *terraform.nodeCloseModule
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider["registry.terraform.io/hashicorp/google"] (close) - *terraform.graphNodeCloseProvider
+  var.project - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  ------
+2022/01/17 15:36:02 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2022/01/17 15:36:02 [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer with new graph:
+  google_bigquery_dataset.hive_store - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.project - *terraform.NodeRootVariable
+  google_bigquery_table.hive_table - *terraform.NodeValidatableResource
+    google_bigquery_dataset.hive_store - *terraform.NodeValidatableResource
+    google_storage_bucket_object.fake_message - *terraform.NodeValidatableResource
+  google_storage_bucket.bucket - *terraform.NodeValidatableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.project - *terraform.NodeRootVariable
+  google_storage_bucket_object.fake_message - *terraform.NodeValidatableResource
+    google_storage_bucket.bucket - *terraform.NodeValidatableResource
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    google_bigquery_table.hive_table - *terraform.NodeValidatableResource
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.region - *terraform.NodeRootVariable
+  provider["registry.terraform.io/hashicorp/google"] (close) - *terraform.graphNodeCloseProvider
+    google_bigquery_table.hive_table - *terraform.NodeValidatableResource
+  root - *terraform.nodeCloseModule
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider["registry.terraform.io/hashicorp/google"] (close) - *terraform.graphNodeCloseProvider
+  var.project - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  ------
+2022/01/17 15:36:02 [DEBUG] Starting graph walk: walkValidate
+2022/01/17 15:36:02 [TRACE] dag/walk: visiting "var.project"
+2022/01/17 15:36:02 [TRACE] vertex "var.project": starting visit (*terraform.NodeRootVariable)
+2022/01/17 15:36:02 [TRACE] vertex "var.project": visit complete
+2022/01/17 15:36:02 [TRACE] dag/walk: visiting "var.region"
+2022/01/17 15:36:02 [TRACE] vertex "var.region": starting visit (*terraform.NodeRootVariable)
+2022/01/17 15:36:02 [TRACE] vertex "var.region": visit complete
+2022/01/17 15:36:02 [TRACE] dag/walk: visiting "provider[\"registry.terraform.io/hashicorp/google\"]"
+2022/01/17 15:36:02 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/google\"]": starting visit (*terraform.NodeApplyableProvider)
+2022-01-17T15:36:02.639Z [INFO]  plugin: configuring client automatic mTLS
+2022-01-17T15:36:02.673Z [DEBUG] plugin: starting plugin: path=.terraform/providers/registry.terraform.io/hashicorp/google/4.5.0/darwin_amd64/terraform-provider-google_v4.5.0_x5 args=[.terraform/providers/registry.terraform.io/hashicorp/google/4.5.0/darwin_amd64/terraform-provider-google_v4.5.0_x5]
+2022-01-17T15:36:02.680Z [DEBUG] plugin: plugin started: path=.terraform/providers/registry.terraform.io/hashicorp/google/4.5.0/darwin_amd64/terraform-provider-google_v4.5.0_x5 pid=54098
+2022-01-17T15:36:02.680Z [DEBUG] plugin: waiting for RPC address: path=.terraform/providers/registry.terraform.io/hashicorp/google/4.5.0/darwin_amd64/terraform-provider-google_v4.5.0_x5
+2022-01-17T15:36:02.710Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: configuring server automatic mTLS: timestamp=2022-01-17T15:36:02.710Z
+2022-01-17T15:36:02.751Z [DEBUG] plugin.terraform-provider-google_v4.5.0_x5: plugin address: address=/var/folders/6y/709fn7mx2_q8r5br55hztqnw0000gp/T/plugin156623577 network=unix timestamp=2022-01-17T15:36:02.751Z
+2022-01-17T15:36:02.751Z [DEBUG] plugin: using plugin: version=5
+2022-01-17T15:36:02.795Z [TRACE] plugin.stdio: waiting for stdio data
+2022/01/17 15:36:02 [TRACE] BuiltinEvalContext: Initialized "provider[\"registry.terraform.io/hashicorp/google\"]" provider for provider["registry.terraform.io/hashicorp/google"]
+2022/01/17 15:36:02 [TRACE] buildProviderConfig for provider["registry.terraform.io/hashicorp/google"]: using explicit config only
+2022/01/17 15:36:02 [TRACE] GRPCProvider: GetSchema
+2022/01/17 15:36:02 [TRACE] GRPCProvider: PrepareProviderConfig
+2022/01/17 15:36:02 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/google\"]": visit complete
+2022/01/17 15:36:02 [TRACE] dag/walk: visiting "google_bigquery_dataset.hive_store"
+2022/01/17 15:36:02 [TRACE] vertex "google_bigquery_dataset.hive_store": starting visit (*terraform.NodeValidatableResource)
+2022/01/17 15:36:02 [TRACE] dag/walk: visiting "google_storage_bucket.bucket"
+2022/01/17 15:36:02 [TRACE] vertex "google_storage_bucket.bucket": starting visit (*terraform.NodeValidatableResource)
+2022/01/17 15:36:02 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2022/01/17 15:36:02 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2022/01/17 15:36:02 [TRACE] vertex "google_storage_bucket.bucket": visit complete
+2022/01/17 15:36:02 [TRACE] vertex "google_bigquery_dataset.hive_store": visit complete
+2022/01/17 15:36:02 [TRACE] dag/walk: visiting "google_storage_bucket_object.fake_message"
+2022/01/17 15:36:02 [TRACE] vertex "google_storage_bucket_object.fake_message": starting visit (*terraform.NodeValidatableResource)
+2022/01/17 15:36:02 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2022/01/17 15:36:02 [TRACE] vertex "google_storage_bucket_object.fake_message": visit complete
+2022/01/17 15:36:02 [TRACE] dag/walk: visiting "google_bigquery_table.hive_table"
+2022/01/17 15:36:02 [TRACE] vertex "google_bigquery_table.hive_table": starting visit (*terraform.NodeValidatableResource)
+2022/01/17 15:36:02 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2022/01/17 15:36:02 [TRACE] vertex "google_bigquery_table.hive_table": visit complete
+2022/01/17 15:36:02 [TRACE] dag/walk: visiting "meta.count-boundary (EachMode fixup)"
+2022/01/17 15:36:02 [TRACE] vertex "meta.count-boundary (EachMode fixup)": starting visit (*terraform.NodeCountBoundary)
+2022/01/17 15:36:02 [TRACE] dag/walk: visiting "provider[\"registry.terraform.io/hashicorp/google\"] (close)"
+2022/01/17 15:36:02 [TRACE] vertex "meta.count-boundary (EachMode fixup)": visit complete
+2022/01/17 15:36:02 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/google\"] (close)": starting visit (*terraform.graphNodeCloseProvider)
+2022/01/17 15:36:02 [TRACE] GRPCProvider: Close
+2022-01-17T15:36:02.890Z [WARN]  plugin.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = transport is closing"
+2022-01-17T15:36:02.893Z [DEBUG] plugin: plugin process exited: path=.terraform/providers/registry.terraform.io/hashicorp/google/4.5.0/darwin_amd64/terraform-provider-google_v4.5.0_x5 pid=54098
+2022-01-17T15:36:02.893Z [DEBUG] plugin: plugin exited
+2022/01/17 15:36:02 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/google\"] (close)": visit complete
+2022/01/17 15:36:02 [TRACE] dag/walk: visiting "root"
+2022/01/17 15:36:02 [TRACE] vertex "root": starting visit (*terraform.nodeCloseModule)
+2022/01/17 15:36:02 [TRACE] vertex "root": visit complete
+2022/01/17 15:36:02 [INFO] backend/local: apply calling Plan
+2022/01/17 15:36:02 [INFO] terraform: building graph: GraphTypePlan
+2022/01/17 15:36:02 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2022/01/17 15:36:02 [TRACE] ConfigTransformer: Starting for path:
+2022/01/17 15:36:02 [TRACE] Completed graph transform *terraform.ConfigTransformer with new graph:
+  google_bigquery_dataset.hive_store (expand) - *terraform.nodeExpandPlannableResource
+  google_bigquery_table.hive_table (expand) - *terraform.nodeExpandPlannableResource
+  google_storage_bucket.bucket (expand) - *terraform.nodeExpandPlannableResource
+  google_storage_bucket_object.fake_message (expand) - *terraform.nodeExpandPlannableResource
+  ------
+2022/01/17 15:36:02 [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2022/01/17 15:36:02 [TRACE] Completed graph transform *terraform.RootVariableTransformer with new graph:
+  google_bigquery_dataset.hive_store (expand) - *terraform.nodeExpandPlannableResource
+  google_bigquery_table.hive_table (expand) - *terraform.nodeExpandPlannableResource
+  google_storage_bucket.bucket (expand) - *terraform.nodeExpandPlannableResource
+  google_storage_bucket_object.fake_message (expand) - *terraform.nodeExpandPlannableResource
+  var.project - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  ------
+2022/01/17 15:36:02 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2022/01/17 15:36:02 [TRACE] Completed graph transform *terraform.ModuleVariableTransformer (no changes)
+2022/01/17 15:36:02 [TRACE] Executing graph transform *terraform.LocalTransformer
+2022/01/17 15:36:02 [TRACE] Completed graph transform *terraform.LocalTransformer (no changes)
+2022/01/17 15:36:02 [TRACE] Executing graph transform *terraform.OutputTransformer
+2022/01/17 15:36:02 [TRACE] Completed graph transform *terraform.OutputTransformer (no changes)
+2022/01/17 15:36:02 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceTransformer
+2022/01/17 15:36:02 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceTransformer (no changes)
+2022/01/17 15:36:02 [TRACE] Executing graph transform *terraform.StateTransformer
+2022/01/17 15:36:02 [TRACE] StateTransformer: creating nodes for deposed instance objects only
+2022/01/17 15:36:02 [TRACE] Completed graph transform *terraform.StateTransformer (no changes)
+2022/01/17 15:36:02 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2022/01/17 15:36:02 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2022/01/17 15:36:02 [TRACE] Executing graph transform *terraform.OrphanOutputTransformer
+2022/01/17 15:36:02 [TRACE] Completed graph transform *terraform.OrphanOutputTransformer (no changes)
+2022/01/17 15:36:02 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2022/01/17 15:36:02 [TRACE] AttachResourceConfigTransformer: attaching to "google_storage_bucket.bucket (expand)" (*terraform.nodeExpandPlannableResource) config from main.tf:16,1-42
+2022/01/17 15:36:02 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to google_storage_bucket.bucket (expand)
+2022/01/17 15:36:02 [TRACE] AttachResourceConfigTransformer: attaching to "google_storage_bucket_object.fake_message (expand)" (*terraform.nodeExpandPlannableResource) config from main.tf:22,1-55
+2022/01/17 15:36:02 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to google_storage_bucket_object.fake_message (expand)
+2022/01/17 15:36:02 [TRACE] AttachResourceConfigTransformer: attaching to "google_bigquery_dataset.hive_store (expand)" (*terraform.nodeExpandPlannableResource) config from main.tf:36,1-48
+2022/01/17 15:36:02 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to google_bigquery_dataset.hive_store (expand)
+2022/01/17 15:36:02 [TRACE] AttachResourceConfigTransformer: attaching to "google_bigquery_table.hive_table (expand)" (*terraform.nodeExpandPlannableResource) config from main.tf:42,1-46
+2022/01/17 15:36:02 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to google_bigquery_table.hive_table (expand)
+2022/01/17 15:36:02 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
+2022/01/17 15:36:02 [TRACE] Executing graph transform *terraform.MissingProvisionerTransformer
+2022/01/17 15:36:02 [TRACE] Completed graph transform *terraform.MissingProvisionerTransformer (no changes)
+2022/01/17 15:36:02 [TRACE] Executing graph transform *terraform.ProvisionerTransformer
+2022/01/17 15:36:02 [TRACE] Completed graph transform *terraform.ProvisionerTransformer (no changes)
+2022/01/17 15:36:02 [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2022/01/17 15:36:02 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2022/01/17 15:36:02 [TRACE] ProviderConfigTransformer: attaching to "provider[\"registry.terraform.io/hashicorp/google\"]" provider configuration from main.tf:12,1-18
+2022/01/17 15:36:02 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+  google_bigquery_dataset.hive_store (expand) - *terraform.nodeExpandPlannableResource
+  google_bigquery_table.hive_table (expand) - *terraform.nodeExpandPlannableResource
+  google_storage_bucket.bucket (expand) - *terraform.nodeExpandPlannableResource
+  google_storage_bucket_object.fake_message (expand) - *terraform.nodeExpandPlannableResource
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  var.project - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  ------
+2022/01/17 15:36:02 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2022/01/17 15:36:02 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer (no changes)
+2022/01/17 15:36:02 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2022/01/17 15:36:02 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/google"] serving google_bigquery_table.hive_table (expand)
+2022/01/17 15:36:02 [DEBUG] ProviderTransformer: "google_bigquery_table.hive_table (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2022/01/17 15:36:02 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/google"] serving google_storage_bucket.bucket (expand)
+2022/01/17 15:36:02 [DEBUG] ProviderTransformer: "google_storage_bucket.bucket (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2022/01/17 15:36:02 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/google"] serving google_storage_bucket_object.fake_message (expand)
+2022/01/17 15:36:02 [DEBUG] ProviderTransformer: "google_storage_bucket_object.fake_message (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2022/01/17 15:36:02 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/google"] serving google_bigquery_dataset.hive_store (expand)
+2022/01/17 15:36:02 [DEBUG] ProviderTransformer: "google_bigquery_dataset.hive_store (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2022/01/17 15:36:02 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer with new graph:
+  google_bigquery_dataset.hive_store (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_bigquery_table.hive_table (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_storage_bucket.bucket (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_storage_bucket_object.fake_message (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  var.project - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  ------
+2022/01/17 15:36:02 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2022/01/17 15:36:02 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer (no changes)
+2022/01/17 15:36:02 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ParentProviderTransformer
+2022/01/17 15:36:02 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ParentProviderTransformer (no changes)
+2022/01/17 15:36:02 [TRACE] Completed graph transform *terraform.graphTransformerMulti with new graph:
+  google_bigquery_dataset.hive_store (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_bigquery_table.hive_table (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_storage_bucket.bucket (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_storage_bucket_object.fake_message (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  var.project - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  ------
+2022/01/17 15:36:02 [TRACE] Executing graph transform *terraform.RemovedModuleTransformer
+2022/01/17 15:36:02 [TRACE] Completed graph transform *terraform.RemovedModuleTransformer (no changes)
+2022/01/17 15:36:02 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2022/01/17 15:36:02 [TRACE] AttachSchemaTransformer: attaching provider config schema to provider["registry.terraform.io/hashicorp/google"]
+2022/01/17 15:36:02 [TRACE] AttachSchemaTransformer: attaching resource schema to google_storage_bucket.bucket (expand)
+2022/01/17 15:36:02 [TRACE] AttachSchemaTransformer: attaching resource schema to google_storage_bucket_object.fake_message (expand)
+2022/01/17 15:36:02 [TRACE] AttachSchemaTransformer: attaching resource schema to google_bigquery_dataset.hive_store (expand)
+2022/01/17 15:36:02 [TRACE] AttachSchemaTransformer: attaching resource schema to google_bigquery_table.hive_table (expand)
+2022/01/17 15:36:02 [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
+2022/01/17 15:36:02 [TRACE] Executing graph transform *terraform.ModuleExpansionTransformer
+2022/01/17 15:36:02 [TRACE] Completed graph transform *terraform.ModuleExpansionTransformer (no changes)
+2022/01/17 15:36:02 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2022/01/17 15:36:02 [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/hashicorp/google\"]" references: [var.region]
+2022/01/17 15:36:02 [DEBUG] ReferenceTransformer: "google_storage_bucket.bucket (expand)" references: [var.project var.project]
+2022/01/17 15:36:02 [DEBUG] ReferenceTransformer: "google_storage_bucket_object.fake_message (expand)" references: [google_storage_bucket.bucket (expand)]
+2022/01/17 15:36:02 [DEBUG] ReferenceTransformer: "google_bigquery_dataset.hive_store (expand)" references: [var.project]
+2022/01/17 15:36:02 [DEBUG] ReferenceTransformer: "google_bigquery_table.hive_table (expand)" references: [google_storage_bucket_object.fake_message (expand) google_bigquery_dataset.hive_store (expand) var.project google_storage_bucket.bucket (expand) google_storage_bucket.bucket (expand)]
+2022/01/17 15:36:02 [DEBUG] ReferenceTransformer: "var.region" references: []
+2022/01/17 15:36:02 [DEBUG] ReferenceTransformer: "var.project" references: []
+2022/01/17 15:36:02 [TRACE] Completed graph transform *terraform.ReferenceTransformer with new graph:
+  google_bigquery_dataset.hive_store (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.project - *terraform.NodeRootVariable
+  google_bigquery_table.hive_table (expand) - *terraform.nodeExpandPlannableResource
+    google_bigquery_dataset.hive_store (expand) - *terraform.nodeExpandPlannableResource
+    google_storage_bucket.bucket (expand) - *terraform.nodeExpandPlannableResource
+    google_storage_bucket_object.fake_message (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.project - *terraform.NodeRootVariable
+  google_storage_bucket.bucket (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.project - *terraform.NodeRootVariable
+  google_storage_bucket_object.fake_message (expand) - *terraform.nodeExpandPlannableResource
+    google_storage_bucket.bucket (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.region - *terraform.NodeRootVariable
+  var.project - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  ------
+2022/01/17 15:36:02 [TRACE] Executing graph transform *terraform.AttachDependenciesTransformer
+2022/01/17 15:36:02 [TRACE] AttachDependenciesTransformer: google_storage_bucket.bucket depends on []
+2022/01/17 15:36:02 [TRACE] AttachDependenciesTransformer: google_storage_bucket_object.fake_message depends on [google_storage_bucket.bucket]
+2022/01/17 15:36:02 [TRACE] AttachDependenciesTransformer: google_bigquery_dataset.hive_store depends on []
+2022/01/17 15:36:02 [TRACE] AttachDependenciesTransformer: google_bigquery_table.hive_table depends on [google_bigquery_dataset.hive_store google_storage_bucket.bucket google_storage_bucket_object.fake_message]
+2022/01/17 15:36:02 [TRACE] Completed graph transform *terraform.AttachDependenciesTransformer (no changes)
+2022/01/17 15:36:02 [TRACE] Executing graph transform *terraform.attachDataResourceDependenciesTransformer
+2022/01/17 15:36:02 [TRACE] Completed graph transform *terraform.attachDataResourceDependenciesTransformer (no changes)
+2022/01/17 15:36:02 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2022/01/17 15:36:02 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2022/01/17 15:36:02 [TRACE] Executing graph transform *terraform.ForcedCBDTransformer
+2022/01/17 15:36:02 [TRACE] ForcedCBDTransformer: "google_storage_bucket.bucket (expand)" (*terraform.nodeExpandPlannableResource) has no CBD descendent, so skipping
+2022/01/17 15:36:02 [TRACE] ForcedCBDTransformer: "google_storage_bucket_object.fake_message (expand)" (*terraform.nodeExpandPlannableResource) has no CBD descendent, so skipping
+2022/01/17 15:36:02 [TRACE] ForcedCBDTransformer: "google_bigquery_dataset.hive_store (expand)" (*terraform.nodeExpandPlannableResource) has no CBD descendent, so skipping
+2022/01/17 15:36:02 [TRACE] ForcedCBDTransformer: "google_bigquery_table.hive_table (expand)" (*terraform.nodeExpandPlannableResource) has no CBD descendent, so skipping
+2022/01/17 15:36:02 [TRACE] Completed graph transform *terraform.ForcedCBDTransformer (no changes)
+2022/01/17 15:36:02 [TRACE] Executing graph transform *terraform.CountBoundaryTransformer
+2022/01/17 15:36:02 [TRACE] Completed graph transform *terraform.CountBoundaryTransformer with new graph:
+  google_bigquery_dataset.hive_store (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.project - *terraform.NodeRootVariable
+  google_bigquery_table.hive_table (expand) - *terraform.nodeExpandPlannableResource
+    google_bigquery_dataset.hive_store (expand) - *terraform.nodeExpandPlannableResource
+    google_storage_bucket.bucket (expand) - *terraform.nodeExpandPlannableResource
+    google_storage_bucket_object.fake_message (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.project - *terraform.NodeRootVariable
+  google_storage_bucket.bucket (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.project - *terraform.NodeRootVariable
+  google_storage_bucket_object.fake_message (expand) - *terraform.nodeExpandPlannableResource
+    google_storage_bucket.bucket (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    google_bigquery_dataset.hive_store (expand) - *terraform.nodeExpandPlannableResource
+    google_bigquery_table.hive_table (expand) - *terraform.nodeExpandPlannableResource
+    google_storage_bucket.bucket (expand) - *terraform.nodeExpandPlannableResource
+    google_storage_bucket_object.fake_message (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.project - *terraform.NodeRootVariable
+    var.region - *terraform.NodeRootVariable
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.region - *terraform.NodeRootVariable
+  var.project - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  ------
+2022/01/17 15:36:02 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2022/01/17 15:36:02 [TRACE] Completed graph transform *terraform.CloseProviderTransformer with new graph:
+  google_bigquery_dataset.hive_store (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.project - *terraform.NodeRootVariable
+  google_bigquery_table.hive_table (expand) - *terraform.nodeExpandPlannableResource
+    google_bigquery_dataset.hive_store (expand) - *terraform.nodeExpandPlannableResource
+    google_storage_bucket.bucket (expand) - *terraform.nodeExpandPlannableResource
+    google_storage_bucket_object.fake_message (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.project - *terraform.NodeRootVariable
+  google_storage_bucket.bucket (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.project - *terraform.NodeRootVariable
+  google_storage_bucket_object.fake_message (expand) - *terraform.nodeExpandPlannableResource
+    google_storage_bucket.bucket (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    google_bigquery_dataset.hive_store (expand) - *terraform.nodeExpandPlannableResource
+    google_bigquery_table.hive_table (expand) - *terraform.nodeExpandPlannableResource
+    google_storage_bucket.bucket (expand) - *terraform.nodeExpandPlannableResource
+    google_storage_bucket_object.fake_message (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.project - *terraform.NodeRootVariable
+    var.region - *terraform.NodeRootVariable
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.region - *terraform.NodeRootVariable
+  provider["registry.terraform.io/hashicorp/google"] (close) - *terraform.graphNodeCloseProvider
+    google_bigquery_dataset.hive_store (expand) - *terraform.nodeExpandPlannableResource
+    google_bigquery_table.hive_table (expand) - *terraform.nodeExpandPlannableResource
+    google_storage_bucket.bucket (expand) - *terraform.nodeExpandPlannableResource
+    google_storage_bucket_object.fake_message (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  var.project - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  ------
+2022/01/17 15:36:02 [TRACE] Executing graph transform *terraform.CloseRootModuleTransformer
+2022/01/17 15:36:02 [TRACE] Completed graph transform *terraform.CloseRootModuleTransformer with new graph:
+  google_bigquery_dataset.hive_store (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.project - *terraform.NodeRootVariable
+  google_bigquery_table.hive_table (expand) - *terraform.nodeExpandPlannableResource
+    google_bigquery_dataset.hive_store (expand) - *terraform.nodeExpandPlannableResource
+    google_storage_bucket.bucket (expand) - *terraform.nodeExpandPlannableResource
+    google_storage_bucket_object.fake_message (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.project - *terraform.NodeRootVariable
+  google_storage_bucket.bucket (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.project - *terraform.NodeRootVariable
+  google_storage_bucket_object.fake_message (expand) - *terraform.nodeExpandPlannableResource
+    google_storage_bucket.bucket (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    google_bigquery_dataset.hive_store (expand) - *terraform.nodeExpandPlannableResource
+    google_bigquery_table.hive_table (expand) - *terraform.nodeExpandPlannableResource
+    google_storage_bucket.bucket (expand) - *terraform.nodeExpandPlannableResource
+    google_storage_bucket_object.fake_message (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.project - *terraform.NodeRootVariable
+    var.region - *terraform.NodeRootVariable
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.region - *terraform.NodeRootVariable
+  provider["registry.terraform.io/hashicorp/google"] (close) - *terraform.graphNodeCloseProvider
+    google_bigquery_dataset.hive_store (expand) - *terraform.nodeExpandPlannableResource
+    google_bigquery_table.hive_table (expand) - *terraform.nodeExpandPlannableResource
+    google_storage_bucket.bucket (expand) - *terraform.nodeExpandPlannableResource
+    google_storage_bucket_object.fake_message (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  root - *terraform.nodeCloseModule
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider["registry.terraform.io/hashicorp/google"] (close) - *terraform.graphNodeCloseProvider
+  var.project - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  ------
+2022/01/17 15:36:02 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2022/01/17 15:36:02 [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer with new graph:
+  google_bigquery_dataset.hive_store (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.project - *terraform.NodeRootVariable
+  google_bigquery_table.hive_table (expand) - *terraform.nodeExpandPlannableResource
+    google_bigquery_dataset.hive_store (expand) - *terraform.nodeExpandPlannableResource
+    google_storage_bucket_object.fake_message (expand) - *terraform.nodeExpandPlannableResource
+  google_storage_bucket.bucket (expand) - *terraform.nodeExpandPlannableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.project - *terraform.NodeRootVariable
+  google_storage_bucket_object.fake_message (expand) - *terraform.nodeExpandPlannableResource
+    google_storage_bucket.bucket (expand) - *terraform.nodeExpandPlannableResource
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    google_bigquery_table.hive_table (expand) - *terraform.nodeExpandPlannableResource
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.region - *terraform.NodeRootVariable
+  provider["registry.terraform.io/hashicorp/google"] (close) - *terraform.graphNodeCloseProvider
+    google_bigquery_table.hive_table (expand) - *terraform.nodeExpandPlannableResource
+  root - *terraform.nodeCloseModule
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider["registry.terraform.io/hashicorp/google"] (close) - *terraform.graphNodeCloseProvider
+  var.project - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  ------
+2022/01/17 15:36:02 [DEBUG] Starting graph walk: walkPlan
+2022/01/17 15:36:02 [TRACE] dag/walk: visiting "var.project"
+2022/01/17 15:36:02 [TRACE] vertex "var.project": starting visit (*terraform.NodeRootVariable)
+2022/01/17 15:36:02 [TRACE] vertex "var.project": visit complete
+2022/01/17 15:36:02 [TRACE] dag/walk: visiting "var.region"
+2022/01/17 15:36:02 [TRACE] vertex "var.region": starting visit (*terraform.NodeRootVariable)
+2022/01/17 15:36:02 [TRACE] vertex "var.region": visit complete
+2022/01/17 15:36:02 [TRACE] dag/walk: visiting "provider[\"registry.terraform.io/hashicorp/google\"]"
+2022/01/17 15:36:02 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/google\"]": starting visit (*terraform.NodeApplyableProvider)
+2022-01-17T15:36:02.894Z [INFO]  plugin: configuring client automatic mTLS
+2022-01-17T15:36:02.930Z [DEBUG] plugin: starting plugin: path=.terraform/providers/registry.terraform.io/hashicorp/google/4.5.0/darwin_amd64/terraform-provider-google_v4.5.0_x5 args=[.terraform/providers/registry.terraform.io/hashicorp/google/4.5.0/darwin_amd64/terraform-provider-google_v4.5.0_x5]
+2022-01-17T15:36:02.936Z [DEBUG] plugin: plugin started: path=.terraform/providers/registry.terraform.io/hashicorp/google/4.5.0/darwin_amd64/terraform-provider-google_v4.5.0_x5 pid=54099
+2022-01-17T15:36:02.936Z [DEBUG] plugin: waiting for RPC address: path=.terraform/providers/registry.terraform.io/hashicorp/google/4.5.0/darwin_amd64/terraform-provider-google_v4.5.0_x5
+2022-01-17T15:36:02.963Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: configuring server automatic mTLS: timestamp=2022-01-17T15:36:02.963Z
+2022-01-17T15:36:03.003Z [DEBUG] plugin: using plugin: version=5
+2022-01-17T15:36:03.003Z [DEBUG] plugin.terraform-provider-google_v4.5.0_x5: plugin address: address=/var/folders/6y/709fn7mx2_q8r5br55hztqnw0000gp/T/plugin193355622 network=unix timestamp=2022-01-17T15:36:03.003Z
+2022/01/17 15:36:03 [TRACE] BuiltinEvalContext: Initialized "provider[\"registry.terraform.io/hashicorp/google\"]" provider for provider["registry.terraform.io/hashicorp/google"]
+2022/01/17 15:36:03 [TRACE] buildProviderConfig for provider["registry.terraform.io/hashicorp/google"]: using explicit config only
+2022/01/17 15:36:03 [TRACE] GRPCProvider: GetSchema
+2022-01-17T15:36:03.049Z [TRACE] plugin.stdio: waiting for stdio data
+2022/01/17 15:36:03 [TRACE] GRPCProvider: Configure
+2022-01-17T15:36:03.104Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:03 [INFO] Authenticating using DefaultClient...: timestamp=2022-01-17T15:36:03.104Z
+2022-01-17T15:36:03.104Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:03 [INFO]   -- Scopes: [https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/userinfo.email]: timestamp=2022-01-17T15:36:03.104Z
+2022-01-17T15:36:03.105Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:03 [INFO] Authenticating using DefaultClient...: timestamp=2022-01-17T15:36:03.105Z
+2022-01-17T15:36:03.105Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:03 [INFO]   -- Scopes: [https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/userinfo.email]: timestamp=2022-01-17T15:36:03.105Z
+2022-01-17T15:36:03.105Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:03 [DEBUG] Waiting for state to become: [success]: timestamp=2022-01-17T15:36:03.105Z
+2022-01-17T15:36:03.542Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:03 [INFO] Terraform is using this identity: jamie.thomson@moneysupermarketgroup.com: timestamp=2022-01-17T15:36:03.542Z
+2022/01/17 15:36:03 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/google\"]": visit complete
+2022/01/17 15:36:03 [TRACE] dag/walk: visiting "google_storage_bucket.bucket (expand)"
+2022/01/17 15:36:03 [TRACE] vertex "google_storage_bucket.bucket (expand)": starting visit (*terraform.nodeExpandPlannableResource)
+2022/01/17 15:36:03 [TRACE] dag/walk: visiting "google_bigquery_dataset.hive_store (expand)"
+2022/01/17 15:36:03 [TRACE] vertex "google_storage_bucket.bucket (expand)": expanding dynamic subgraph
+2022/01/17 15:36:03 [TRACE] vertex "google_bigquery_dataset.hive_store (expand)": starting visit (*terraform.nodeExpandPlannableResource)
+2022/01/17 15:36:03 [TRACE] vertex "google_storage_bucket.bucket (expand)": entering dynamic subgraph
+2022/01/17 15:36:03 [TRACE] vertex "google_bigquery_dataset.hive_store (expand)": expanding dynamic subgraph
+2022/01/17 15:36:03 [TRACE] vertex "google_bigquery_dataset.hive_store (expand)": entering dynamic subgraph
+2022/01/17 15:36:03 [TRACE] dag/walk: visiting "google_storage_bucket.bucket"
+2022/01/17 15:36:03 [TRACE] vertex "google_storage_bucket.bucket": starting visit (*terraform.NodePlannableResource)
+2022/01/17 15:36:03 [TRACE] dag/walk: visiting "google_bigquery_dataset.hive_store"
+2022/01/17 15:36:03 [TRACE] vertex "google_storage_bucket.bucket": expanding dynamic subgraph
+2022/01/17 15:36:03 [TRACE] vertex "google_bigquery_dataset.hive_store": starting visit (*terraform.NodePlannableResource)
+2022/01/17 15:36:03 [TRACE] Executing graph transform *terraform.ResourceCountTransformer
+2022/01/17 15:36:03 [TRACE] vertex "google_bigquery_dataset.hive_store": expanding dynamic subgraph
+2022/01/17 15:36:03 [TRACE] ResourceCountTransformer: adding google_storage_bucket.bucket as *terraform.NodePlannableResourceInstance
+2022/01/17 15:36:03 [TRACE] Completed graph transform *terraform.ResourceCountTransformer with new graph:
+  google_storage_bucket.bucket - *terraform.NodePlannableResourceInstance
+  ------
+2022/01/17 15:36:03 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceCountTransformer
+2022/01/17 15:36:03 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceCountTransformer (no changes)
+2022/01/17 15:36:03 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2022/01/17 15:36:03 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2022/01/17 15:36:03 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2022/01/17 15:36:03 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2022/01/17 15:36:03 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2022/01/17 15:36:03 [INFO] ReferenceTransformer: reference not found: "var.project"
+2022/01/17 15:36:03 [INFO] ReferenceTransformer: reference not found: "var.project"
+2022/01/17 15:36:03 [DEBUG] ReferenceTransformer: "google_storage_bucket.bucket" references: []
+2022/01/17 15:36:03 [TRACE] Completed graph transform *terraform.ReferenceTransformer (no changes)
+2022/01/17 15:36:03 [TRACE] Executing graph transform *terraform.RootTransformer
+2022/01/17 15:36:03 [TRACE] Completed graph transform *terraform.RootTransformer (no changes)
+2022/01/17 15:36:03 [TRACE] vertex "google_storage_bucket.bucket": entering dynamic subgraph
+2022/01/17 15:36:03 [TRACE] dag/walk: visiting "google_storage_bucket.bucket"
+2022/01/17 15:36:03 [TRACE] vertex "google_storage_bucket.bucket": starting visit (*terraform.NodePlannableResourceInstance)
+2022/01/17 15:36:03 [TRACE] Executing graph transform *terraform.ResourceCountTransformer
+2022/01/17 15:36:03 [TRACE] ResourceCountTransformer: adding google_bigquery_dataset.hive_store as *terraform.NodePlannableResourceInstance
+2022/01/17 15:36:03 [TRACE] Completed graph transform *terraform.ResourceCountTransformer with new graph:
+  google_bigquery_dataset.hive_store - *terraform.NodePlannableResourceInstance
+  ------
+2022/01/17 15:36:03 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceCountTransformer
+2022/01/17 15:36:03 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceCountTransformer (no changes)
+2022/01/17 15:36:03 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2022/01/17 15:36:03 [TRACE] ReadResourceInstanceState: reading state for google_storage_bucket.bucket
+2022/01/17 15:36:03 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2022/01/17 15:36:03 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2022/01/17 15:36:03 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2022/01/17 15:36:03 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2022/01/17 15:36:03 [INFO] ReferenceTransformer: reference not found: "var.project"
+2022/01/17 15:36:03 [DEBUG] ReferenceTransformer: "google_bigquery_dataset.hive_store" references: []
+2022/01/17 15:36:03 [TRACE] Completed graph transform *terraform.ReferenceTransformer (no changes)
+2022/01/17 15:36:03 [TRACE] Executing graph transform *terraform.RootTransformer
+2022/01/17 15:36:03 [TRACE] Completed graph transform *terraform.RootTransformer (no changes)
+2022/01/17 15:36:03 [TRACE] vertex "google_bigquery_dataset.hive_store": entering dynamic subgraph
+2022/01/17 15:36:03 [TRACE] dag/walk: visiting "google_bigquery_dataset.hive_store"
+2022/01/17 15:36:03 [TRACE] vertex "google_bigquery_dataset.hive_store": starting visit (*terraform.NodePlannableResourceInstance)
+google_storage_bucket.bucket: Refreshing state... [id=msm-groupdata-datalake-dev-bucket]
+2022/01/17 15:36:03 [TRACE] ReadResourceInstanceState: reading state for google_bigquery_dataset.hive_store
+2022/01/17 15:36:03 [TRACE] UpgradeResourgoogle_bigquery_dataset.hive_store: Refreshing state... [id=projects/msm-groupdata-datalake-dev/datasets/hive_store]
+ceState: schema version of google_storage_bucket.bucket is still 0; calling provider "google" for any other minor fixups
+2022/01/17 15:36:03 [TRACE] GRPCProvider: UpgradeResourceState
+2022/01/17 15:36:03 [TRACE] UpgradeResourceState: schema version of google_bigquery_dataset.hive_store is still 0; calling provider "google" for any other minor fixups
+2022/01/17 15:36:03 [TRACE] GRPCProvider: UpgradeResourceState
+2022/01/17 15:36:03 [TRACE] GRPCProvider: ReadResource
+2022-01-17T15:36:03.546Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:03 [DEBUG] Waiting for state to become: [success]: timestamp=2022-01-17T15:36:03.546Z
+2022/01/17 15:36:03 [TRACE] GRPCProvider: ReadResource
+2022-01-17T15:36:03.546Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:03 [INFO] Instantiating Google Storage client for path https://storage.googleapis.com/storage/v1/: timestamp=2022-01-17T15:36:03.546Z
+2022-01-17T15:36:03.547Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:03 [DEBUG] Retry Transport: starting RoundTrip retry loop: timestamp=2022-01-17T15:36:03.546Z
+2022-01-17T15:36:03.547Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:03 [DEBUG] Retry Transport: request attempt 0: timestamp=2022-01-17T15:36:03.546Z
+2022-01-17T15:36:03.547Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:03 [WARN] Invalid log level: "DBUG". Defaulting to level: TRACE. Valid levels are: [TRACE DEBUG INFO WARN ERROR]: timestamp=2022-01-17T15:36:03.547Z
+2022-01-17T15:36:03.547Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:03 [DEBUG] Google API Request Details:
+---[ REQUEST ]---------------------------------------
+GET /storage/v1/b/msm-groupdata-datalake-dev-bucket?alt=json&prettyPrint=false HTTP/1.1
+Host: storage.googleapis.com
+User-Agent: google-api-go-client/0.5 Terraform/0.14.9 (+https://www.terraform.io) Terraform-Plugin-SDK/2.5.0 terraform-provider-google/dev
+X-Goog-Api-Client: gl-go/1.16.2 gdcl/20211201
+Accept-Encoding: gzip
+
+
+-----------------------------------------------------: timestamp=2022-01-17T15:36:03.547Z
+2022-01-17T15:36:03.548Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:03 [DEBUG] Waiting for state to become: [success]: timestamp=2022-01-17T15:36:03.547Z
+2022-01-17T15:36:03.548Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:03 [DEBUG] Retry Transport: starting RoundTrip retry loop: timestamp=2022-01-17T15:36:03.548Z
+2022-01-17T15:36:03.548Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:03 [DEBUG] Retry Transport: request attempt 0: timestamp=2022-01-17T15:36:03.548Z
+2022-01-17T15:36:03.548Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:03 [WARN] Invalid log level: "DBUG". Defaulting to level: TRACE. Valid levels are: [TRACE DEBUG INFO WARN ERROR]: timestamp=2022-01-17T15:36:03.548Z
+2022-01-17T15:36:03.548Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:03 [DEBUG] Google API Request Details:
+---[ REQUEST ]---------------------------------------
+GET /bigquery/v2/projects/msm-groupdata-datalake-dev/datasets/hive_store?alt=json HTTP/1.1
+Host: bigquery.googleapis.com
+User-Agent: Terraform/0.14.9 (+https://www.terraform.io) Terraform-Plugin-SDK/2.5.0 terraform-provider-google/dev
+Content-Type: application/json
+Accept-Encoding: gzip
+
+
+-----------------------------------------------------: timestamp=2022-01-17T15:36:03.548Z
+2022-01-17T15:36:03.762Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:03 [WARN] Invalid log level: "DBUG". Defaulting to level: TRACE. Valid levels are: [TRACE DEBUG INFO WARN ERROR]: timestamp=2022-01-17T15:36:03.762Z
+2022-01-17T15:36:03.762Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:03 [DEBUG] Google API Response Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/2.0 200 OK
+Content-Length: 568
+Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+Cache-Control: private, max-age=0, must-revalidate, no-transform
+Content-Type: application/json; charset=UTF-8
+Date: Mon, 17 Jan 2022 15:36:03 GMT
+Etag: CAE=
+Expires: Mon, 17 Jan 2022 15:36:03 GMT
+Server: UploadServer
+Vary: Origin
+Vary: X-Origin
+X-Guploader-Uploadid: ADPycduvl1rwvt85PcCF9_pBWviINttZVnwbiZnuooZGKof38A4cH0r9fzdPHv-aKrURmGJOIgUhRX8xZKub6Q5hP8o
+
+{
+ "kind": "storage#bucket",
+ "selfLink": "https://www.googleapis.com/storage/v1/b/msm-groupdata-datalake-dev-bucket",
+ "id": "msm-groupdata-datalake-dev-bucket",
+ "name": "msm-groupdata-datalake-dev-bucket",
+ "projectNumber": "892242413556",
+ "metageneration": "1",
+ "location": "EU",
+ "storageClass": "STANDARD",
+ "etag": "CAE=",
+ "timeCreated": "2022-01-17T15:33:37.659Z",
+ "updated": "2022-01-17T15:33:37.659Z",
+ "iamConfiguration": {
+  "bucketPolicyOnly": {
+   "enabled": false
+  },
+  "uniformBucketLevelAccess": {
+   "enabled": false
+  },
+  "publicAccessPrevention": "inherited"
+ },
+ "locationType": "multi-region",
+ "rpo": "DEFAULT"
+}
+-----------------------------------------------------: timestamp=2022-01-17T15:36:03.762Z
+2022-01-17T15:36:03.762Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:03 [DEBUG] Retry Transport: Stopping retries, last request was successful: timestamp=2022-01-17T15:36:03.762Z
+2022-01-17T15:36:03.763Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:03 [DEBUG] Retry Transport: Returning after 1 attempts: timestamp=2022-01-17T15:36:03.762Z
+2022-01-17T15:36:03.763Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:03 [DEBUG] Read bucket msm-groupdata-datalake-dev-bucket at location https://www.googleapis.com/storage/v1/b/msm-groupdata-datalake-dev-bucket: timestamp=2022-01-17T15:36:03.763Z
+2022/01/17 15:36:03 [TRACE] EvalWriteState: using RefreshState for google_storage_bucket.bucket
+2022/01/17 15:36:03 [TRACE] EvalWriteState: recording 0 dependencies for google_storage_bucket.bucket
+2022/01/17 15:36:03 [TRACE] EvalWriteState: writing current state object for google_storage_bucket.bucket
+2022/01/17 15:36:03 [TRACE] Re-validating config for "google_storage_bucket.bucket"
+2022/01/17 15:36:03 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2022/01/17 15:36:03 [TRACE] GRPCProvider: PlanResourceChange
+2022/01/17 15:36:03 [TRACE] EvalWriteState: writing current state object for google_storage_bucket.bucket
+2022/01/17 15:36:03 [TRACE] EvalWriteDiff: recorded NoOp change for google_storage_bucket.bucket
+2022/01/17 15:36:03 [TRACE] vertex "google_storage_bucket.bucket": visit complete
+2022/01/17 15:36:03 [TRACE] vertex "google_storage_bucket.bucket": dynamic subgraph completed successfully
+2022/01/17 15:36:03 [TRACE] vertex "google_storage_bucket.bucket": visit complete
+2022/01/17 15:36:03 [TRACE] vertex "google_storage_bucket.bucket (expand)": dynamic subgraph completed successfully
+2022/01/17 15:36:03 [TRACE] vertex "google_storage_bucket.bucket (expand)": visit complete
+2022/01/17 15:36:03 [TRACE] dag/walk: visiting "google_storage_bucket_object.fake_message (expand)"
+2022/01/17 15:36:03 [TRACE] vertex "google_storage_bucket_object.fake_message (expand)": starting visit (*terraform.nodeExpandPlannableResource)
+2022/01/17 15:36:03 [TRACE] vertex "google_storage_bucket_object.fake_message (expand)": expanding dynamic subgraph
+2022/01/17 15:36:03 [TRACE] vertex "google_storage_bucket_object.fake_message (expand)": entering dynamic subgraph
+2022/01/17 15:36:03 [TRACE] dag/walk: visiting "google_storage_bucket_object.fake_message"
+2022/01/17 15:36:03 [TRACE] vertex "google_storage_bucket_object.fake_message": starting visit (*terraform.NodePlannableResource)
+2022/01/17 15:36:03 [TRACE] vertex "google_storage_bucket_object.fake_message": expanding dynamic subgraph
+2022/01/17 15:36:03 [TRACE] Executing graph transform *terraform.ResourceCountTransformer
+2022/01/17 15:36:03 [TRACE] ResourceCountTransformer: adding google_storage_bucket_object.fake_message as *terraform.NodePlannableResourceInstance
+2022/01/17 15:36:03 [TRACE] Completed graph transform *terraform.ResourceCountTransformer with new graph:
+  google_storage_bucket_object.fake_message - *terraform.NodePlannableResourceInstance
+  ------
+2022/01/17 15:36:03 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceCountTransformer
+2022/01/17 15:36:03 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceCountTransformer (no changes)
+2022/01/17 15:36:03 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2022/01/17 15:36:03 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2022/01/17 15:36:03 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2022/01/17 15:36:03 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2022/01/17 15:36:03 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2022/01/17 15:36:03 [DEBUG] ReferenceTransformer: "google_storage_bucket_object.fake_message" references: []
+2022/01/17 15:36:03 [TRACE] Completed graph transform *terraform.ReferenceTransformer (no changes)
+2022/01/17 15:36:03 [TRACE] Executing graph transform *terraform.RootTransformer
+2022/01/17 15:36:03 [TRACE] Completed graph transform *terraform.RootTransformer (no changes)
+2022/01/17 15:36:03 [TRACE] vertex "google_storage_bucket_object.fake_message": entering dynamic subgraph
+2022/01/17 15:36:03 [TRACE] dag/walk: visiting "google_storage_bucket_object.fake_message"
+2022/01/17 15:36:03 [TRACE] vertex "google_storage_bucket_object.fake_message": starting visit (*terraform.NodePlannableResourceInstance)
+2022/01/17 15:36:03 [TRACE] ReadResourceInstanceState: reading state for google_storage_bucket_object.fake_message
+2022/01/17 15:36:03 [TRACE] UpgradeResourceState: schema version of google_storage_bucket_object.fake_message is still 0; calling provider "google" for any other minor fixups
+2022/01/17 15:36:03 [TRACE] GRPCProvider: UpgradeResourceState
+2022/01/17 15:36:03 [TRACE] GRPCProvider: ReadResource
+google_storage_bucket_object.fake_message: Refreshing state... [id=msm-groupdata-datalake-dev-bucket-publish/dt=2000-01-01/hr=00/min=00/fake_message.json]
+2022-01-17T15:36:03.770Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:03 [INFO] Instantiating Google Storage client for path https://storage.googleapis.com/storage/v1/: timestamp=2022-01-17T15:36:03.770Z
+2022-01-17T15:36:03.770Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:03 [DEBUG] Retry Transport: starting RoundTrip retry loop: timestamp=2022-01-17T15:36:03.770Z
+2022-01-17T15:36:03.770Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:03 [DEBUG] Retry Transport: request attempt 0: timestamp=2022-01-17T15:36:03.770Z
+2022-01-17T15:36:03.770Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:03 [WARN] Invalid log level: "DBUG". Defaulting to level: TRACE. Valid levels are: [TRACE DEBUG INFO WARN ERROR]: timestamp=2022-01-17T15:36:03.770Z
+2022-01-17T15:36:03.770Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:03 [DEBUG] Google API Request Details:
+---[ REQUEST ]---------------------------------------
+GET /storage/v1/b/msm-groupdata-datalake-dev-bucket/o/publish%2Fdt%3D2000-01-01%2Fhr%3D00%2Fmin%3D00%2Ffake_message.json?alt=json&prettyPrint=false HTTP/1.1
+Host: storage.googleapis.com
+User-Agent: google-api-go-client/0.5 Terraform/0.14.9 (+https://www.terraform.io) Terraform-Plugin-SDK/2.5.0 terraform-provider-google/dev
+X-Goog-Api-Client: gl-go/1.16.2 gdcl/20211201
+Accept-Encoding: gzip
+
+
+-----------------------------------------------------: timestamp=2022-01-17T15:36:03.770Z
+2022-01-17T15:36:03.891Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:03 [WARN] Invalid log level: "DBUG". Defaulting to level: TRACE. Valid levels are: [TRACE DEBUG INFO WARN ERROR]: timestamp=2022-01-17T15:36:03.891Z
+2022-01-17T15:36:03.891Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:03 [DEBUG] Google API Response Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/2.0 200 OK
+Content-Length: 942
+Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+Cache-Control: private, max-age=0, must-revalidate, no-transform
+Content-Type: application/json; charset=UTF-8
+Date: Mon, 17 Jan 2022 15:36:03 GMT
+Etag: CJLL+YKOufUCEAE=
+Expires: Mon, 17 Jan 2022 15:36:03 GMT
+Server: UploadServer
+Vary: Origin
+Vary: X-Origin
+X-Guploader-Uploadid: ADPycds4Gb0ICCW_XAtdm_fhpHoW3sBO-CELWxNYoDXY-CuBNr79Yzz9jwxsCdV0bNU8YHzjvbwxV0Vfq_7jbJJMsyg
+
+{
+ "kind": "storage#object",
+ "id": "msm-groupdata-datalake-dev-bucket/publish/dt=2000-01-01/hr=00/min=00/fake_message.json/1642433618011538",
+ "selfLink": "https://www.googleapis.com/storage/v1/b/msm-groupdata-datalake-dev-bucket/o/publish%2Fdt=2000-01-01%2Fhr=00%2Fmin=00%2Ffake_message.json",
+ "mediaLink": "https://storage.googleapis.com/download/storage/v1/b/msm-groupdata-datalake-dev-bucket/o/publish%2Fdt=2000-01-01%2Fhr=00%2Fmin=00%2Ffake_message.json?generation=1642433618011538&alt=media",
+ "name": "publish/dt=2000-01-01/hr=00/min=00/fake_message.json",
+ "bucket": "msm-groupdata-datalake-dev-bucket",
+ "generation": "1642433618011538",
+ "metageneration": "1",
+ "contentType": "text/plain; charset=utf-8",
+ "storageClass": "STANDARD",
+ "size": "18",
+ "md5Hash": "03lxBMroFzhBjW54QFNSbQ==",
+ "crc32c": "XtcQRw==",
+ "etag": "CJLL+YKOufUCEAE=",
+ "timeCreated": "2022-01-17T15:33:38.028Z",
+ "updated": "2022-01-17T15:33:38.028Z",
+ "timeStorageClassUpdated": "2022-01-17T15:33:38.028Z"
+}
+-----------------------------------------------------: timestamp=2022-01-17T15:36:03.891Z
+2022-01-17T15:36:03.891Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:03 [DEBUG] Retry Transport: Stopping retries, last request was successful: timestamp=2022-01-17T15:36:03.891Z
+2022-01-17T15:36:03.891Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:03 [DEBUG] Retry Transport: Returning after 1 attempts: timestamp=2022-01-17T15:36:03.891Z
+2022/01/17 15:36:03 [TRACE] EvalWriteState: using RefreshState for google_storage_bucket_object.fake_message
+2022/01/17 15:36:03 [TRACE] EvalWriteState: recording 1 dependencies for google_storage_bucket_object.fake_message
+2022/01/17 15:36:03 [TRACE] EvalWriteState: writing current state object for google_storage_bucket_object.fake_message
+2022/01/17 15:36:03 [TRACE] Re-validating config for "google_storage_bucket_object.fake_message"
+2022/01/17 15:36:03 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2022/01/17 15:36:03 [TRACE] GRPCProvider: PlanResourceChange
+2022/01/17 15:36:03 [TRACE] EvalWriteState: writing current state object for google_storage_bucket_object.fake_message
+2022/01/17 15:36:03 [TRACE] EvalWriteDiff: recorded NoOp change for google_storage_bucket_object.fake_message
+2022/01/17 15:36:03 [TRACE] vertex "google_storage_bucket_object.fake_message": visit complete
+2022/01/17 15:36:03 [TRACE] vertex "google_storage_bucket_object.fake_message": dynamic subgraph completed successfully
+2022/01/17 15:36:03 [TRACE] vertex "google_storage_bucket_object.fake_message": visit complete
+2022/01/17 15:36:03 [TRACE] vertex "google_storage_bucket_object.fake_message (expand)": dynamic subgraph completed successfully
+2022/01/17 15:36:03 [TRACE] vertex "google_storage_bucket_object.fake_message (expand)": visit complete
+2022-01-17T15:36:03.958Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:03 [WARN] Invalid log level: "DBUG". Defaulting to level: TRACE. Valid levels are: [TRACE DEBUG INFO WARN ERROR]: timestamp=2022-01-17T15:36:03.958Z
+2022-01-17T15:36:03.958Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:03 [DEBUG] Google API Response Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/2.0 200 OK
+Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+Cache-Control: private
+Content-Type: application/json; charset=UTF-8
+Date: Mon, 17 Jan 2022 15:36:03 GMT
+Etag: pgMF6HDSCw6UwBP0DJsl5A==
+Server: ESF
+Vary: Origin
+Vary: X-Origin
+Vary: Referer
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Xss-Protection: 0
+
+{
+  "kind": "bigquery#dataset",
+  "etag": "pgMF6HDSCw6UwBP0DJsl5A==",
+  "id": "msm-groupdata-datalake-dev:hive_store",
+  "selfLink": "https://bigquery.googleapis.com/bigquery/v2/projects/msm-groupdata-datalake-dev/datasets/hive_store",
+  "datasetReference": {
+    "datasetId": "hive_store",
+    "projectId": "msm-groupdata-datalake-dev"
+  },
+  "access": [
+    {
+      "role": "WRITER",
+      "specialGroup": "projectWriters"
+    },
+    {
+      "role": "OWNER",
+      "specialGroup": "projectOwners"
+    },
+    {
+      "role": "OWNER",
+      "userByEmail": "jamie.thomson@moneysupermarketgroup.com"
+    },
+    {
+      "role": "READER",
+      "specialGroup": "projectReaders"
+    }
+  ],
+  "creationTime": "1642433617374",
+  "lastModifiedTime": "1642433617374",
+  "location": "EU",
+  "type": "DEFAULT"
+}
+
+-----------------------------------------------------: timestamp=2022-01-17T15:36:03.958Z
+2022-01-17T15:36:03.958Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:03 [DEBUG] Retry Transport: Stopping retries, last request was successful: timestamp=2022-01-17T15:36:03.958Z
+2022-01-17T15:36:03.959Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:03 [DEBUG] Retry Transport: Returning after 1 attempts: timestamp=2022-01-17T15:36:03.958Z
+2022/01/17 15:36:03 [TRACE] EvalWriteState: using RefreshState for google_bigquery_dataset.hive_store
+2022/01/17 15:36:03 [TRACE] EvalWriteState: recording 0 dependencies for google_bigquery_dataset.hive_store
+2022/01/17 15:36:03 [TRACE] EvalWriteState: writing current state object for google_bigquery_dataset.hive_store
+2022/01/17 15:36:03 [TRACE] Re-validating config for "google_bigquery_dataset.hive_store"
+2022/01/17 15:36:03 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2022/01/17 15:36:03 [TRACE] GRPCProvider: PlanResourceChange
+2022/01/17 15:36:03 [TRACE] EvalWriteState: writing current state object for google_bigquery_dataset.hive_store
+2022/01/17 15:36:03 [TRACE] EvalWriteDiff: recorded NoOp change for google_bigquery_dataset.hive_store
+2022/01/17 15:36:03 [TRACE] vertex "google_bigquery_dataset.hive_store": visit complete
+2022/01/17 15:36:03 [TRACE] vertex "google_bigquery_dataset.hive_store": dynamic subgraph completed successfully
+2022/01/17 15:36:03 [TRACE] vertex "google_bigquery_dataset.hive_store": visit complete
+2022/01/17 15:36:03 [TRACE] vertex "google_bigquery_dataset.hive_store (expand)": dynamic subgraph completed successfully
+2022/01/17 15:36:03 [TRACE] vertex "google_bigquery_dataset.hive_store (expand)": visit complete
+2022/01/17 15:36:03 [TRACE] dag/walk: visiting "google_bigquery_table.hive_table (expand)"
+2022/01/17 15:36:03 [TRACE] vertex "google_bigquery_table.hive_table (expand)": starting visit (*terraform.nodeExpandPlannableResource)
+2022/01/17 15:36:03 [TRACE] vertex "google_bigquery_table.hive_table (expand)": expanding dynamic subgraph
+2022/01/17 15:36:03 [TRACE] vertex "google_bigquery_table.hive_table (expand)": entering dynamic subgraph
+2022/01/17 15:36:03 [TRACE] dag/walk: visiting "google_bigquery_table.hive_table"
+2022/01/17 15:36:03 [TRACE] vertex "google_bigquery_table.hive_table": starting visit (*terraform.NodePlannableResource)
+2022/01/17 15:36:03 [TRACE] vertex "google_bigquery_table.hive_table": expanding dynamic subgraph
+2022/01/17 15:36:03 [TRACE] Executing graph transform *terraform.ResourceCountTransformer
+2022/01/17 15:36:03 [TRACE] ResourceCountTransformer: adding google_bigquery_table.hive_table as *terraform.NodePlannableResourceInstance
+2022/01/17 15:36:03 [TRACE] Completed graph transform *terraform.ResourceCountTransformer with new graph:
+  google_bigquery_table.hive_table - *terraform.NodePlannableResourceInstance
+  ------
+2022/01/17 15:36:03 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceCountTransformer
+2022/01/17 15:36:03 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceCountTransformer (no changes)
+2022/01/17 15:36:03 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2022/01/17 15:36:03 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2022/01/17 15:36:03 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2022/01/17 15:36:03 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2022/01/17 15:36:03 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2022/01/17 15:36:03 [INFO] ReferenceTransformer: reference not found: "google_storage_bucket_object.fake_message"
+2022/01/17 15:36:03 [INFO] ReferenceTransformer: reference not found: "var.project"
+2022/01/17 15:36:03 [DEBUG] ReferenceTransformer: "google_bigquery_table.hive_table" references: []
+2022/01/17 15:36:03 [TRACE] Completed graph transform *terraform.ReferenceTransformer (no changes)
+2022/01/17 15:36:03 [TRACE] Executing graph transform *terraform.RootTransformer
+2022/01/17 15:36:03 [TRACE] Completed graph transform *terraform.RootTransformer (no changes)
+2022/01/17 15:36:03 [TRACE] vertex "google_bigquery_table.hive_table": entering dynamic subgraph
+2022/01/17 15:36:03 [TRACE] dag/walk: visiting "google_bigquery_table.hive_table"
+2022/01/17 15:36:03 [TRACE] vertex "google_bigquery_table.hive_table": starting visit (*terraform.NodePlannableResourceInstance)
+2022/01/17 15:36:03 [TRACE] ReadResourceInstanceState: reading state for google_bigquery_table.hive_table
+2022/01/17 15:36:03 [TRACE] UpgradeResourceState: schema version of google_bigquery_table.hive_table is still 0; calling provider "google" for any other minor fixups
+2022/01/17 15:36:03 [TRACE] GRPCProvider: UpgradeResourceState
+2022/01/17 15:36:03 [TRACE] GRPCProvider: ReadResource
+google_bigquery_table.hive_table: Refreshing state... [id=projects/msm-groupdata-datalake-dev/datasets/hive_store/tables/messages]
+2022-01-17T15:36:03.968Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:03 [INFO] Reading BigQuery table: projects/msm-groupdata-datalake-dev/datasets/hive_store/tables/messages: timestamp=2022-01-17T15:36:03.968Z
+2022-01-17T15:36:03.968Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:03 [INFO] Instantiating Google Cloud BigQuery client for path https://bigquery.googleapis.com/bigquery/v2/: timestamp=2022-01-17T15:36:03.968Z
+2022-01-17T15:36:03.968Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:03 [DEBUG] Retry Transport: starting RoundTrip retry loop: timestamp=2022-01-17T15:36:03.968Z
+2022-01-17T15:36:03.968Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:03 [DEBUG] Retry Transport: request attempt 0: timestamp=2022-01-17T15:36:03.968Z
+2022-01-17T15:36:03.968Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:03 [DEBUG] Retry Transport: starting RoundTrip retry loop: timestamp=2022-01-17T15:36:03.968Z
+2022-01-17T15:36:03.968Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:03 [DEBUG] Retry Transport: request attempt 0: timestamp=2022-01-17T15:36:03.968Z
+2022-01-17T15:36:03.968Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:03 [WARN] Invalid log level: "DBUG". Defaulting to level: TRACE. Valid levels are: [TRACE DEBUG INFO WARN ERROR]: timestamp=2022-01-17T15:36:03.968Z
+2022-01-17T15:36:03.968Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:03 [DEBUG] Google API Request Details:
+---[ REQUEST ]---------------------------------------
+GET /bigquery/v2/projects/msm-groupdata-datalake-dev/datasets/hive_store/tables/messages?alt=json&prettyPrint=false HTTP/1.1
+Host: bigquery.googleapis.com
+User-Agent: google-api-go-client/0.5 Terraform/0.14.9 (+https://www.terraform.io) Terraform-Plugin-SDK/2.5.0 terraform-provider-google/dev
+X-Goog-Api-Client: gl-go/1.16.2 gdcl/20211124
+Accept-Encoding: gzip
+
+
+-----------------------------------------------------: timestamp=2022-01-17T15:36:03.968Z
+2022-01-17T15:36:04.066Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:04 [WARN] Invalid log level: "DBUG". Defaulting to level: TRACE. Valid levels are: [TRACE DEBUG INFO WARN ERROR]: timestamp=2022-01-17T15:36:04.066Z
+2022-01-17T15:36:04.066Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:04 [DEBUG] Google API Response Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/2.0 200 OK
+Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+Cache-Control: private
+Content-Type: application/json; charset=UTF-8
+Date: Mon, 17 Jan 2022 15:36:04 GMT
+Etag: jf2DCnVsB1knWWnx2a6/BA==
+Server: ESF
+Vary: Origin
+Vary: X-Origin
+Vary: Referer
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Xss-Protection: 0
+
+{
+ "kind": "bigquery#table",
+ "etag": "jf2DCnVsB1knWWnx2a6/BA==",
+ "id": "msm-groupdata-datalake-dev:hive_store.messages",
+ "selfLink": "https://bigquery.googleapis.com/bigquery/v2/projects/msm-groupdata-datalake-dev/datasets/hive_store/tables/messages",
+ "tableReference": {
+  "projectId": "msm-groupdata-datalake-dev",
+  "datasetId": "hive_store",
+  "tableId": "messages"
+ },
+ "schema": {
+  "fields": [
+   {
+    "name": "column1",
+    "type": "STRING",
+    "mode": "NULLABLE"
+   },
+   {
+    "name": "dt",
+    "type": "STRING",
+    "mode": "NULLABLE"
+   },
+   {
+    "name": "hr",
+    "type": "STRING",
+    "mode": "NULLABLE"
+   },
+   {
+    "name": "min",
+    "type": "STRING",
+    "mode": "NULLABLE"
+   }
+  ]
+ },
+ "numBytes": "0",
+ "numLongTermBytes": "0",
+ "numRows": "0",
+ "creationTime": "1642433667935",
+ "lastModifiedTime": "1642433668199",
+ "type": "EXTERNAL",
+ "externalDataConfiguration": {
+  "sourceUris": [
+   "gs://msm-groupdata-datalake-dev-bucket/publish/*"
+  ],
+  "sourceFormat": "NEWLINE_DELIMITED_JSON",
+  "compression": "NONE",
+  "hivePartitioningOptions": {
+   "mode": "CUSTOM",
+   "sourceUriPrefix": "gs://msm-groupdata-datalake-dev-bucket/publish/{dt:STRING}/{hr:STRING}/{min:STRING}",
+   "fields": [
+    "dt",
+    "hr",
+    "min"
+   ]
+  }
+ },
+ "location": "EU"
+}
+-----------------------------------------------------: timestamp=2022-01-17T15:36:04.066Z
+2022-01-17T15:36:04.067Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:04 [DEBUG] Retry Transport: Stopping retries, last request was successful: timestamp=2022-01-17T15:36:04.066Z
+2022-01-17T15:36:04.067Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:04 [DEBUG] Retry Transport: Returning after 1 attempts: timestamp=2022-01-17T15:36:04.066Z
+2022-01-17T15:36:04.067Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:04 [DEBUG] Retry Transport: Stopping retries, last request was successful: timestamp=2022-01-17T15:36:04.066Z
+2022-01-17T15:36:04.067Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:04 [DEBUG] Retry Transport: Returning after 1 attempts: timestamp=2022-01-17T15:36:04.066Z
+2022/01/17 15:36:04 [WARN] Provider "registry.terraform.io/hashicorp/google" produced an unexpected new value for google_bigquery_table.hive_table during refresh.
+      - .labels: was null, but now cty.MapValEmpty(cty.String)
+2022/01/17 15:36:04 [TRACE] EvalWriteState: using RefreshState for google_bigquery_table.hive_table
+2022/01/17 15:36:04 [TRACE] EvalWriteState: recording 3 dependencies for google_bigquery_table.hive_table
+2022/01/17 15:36:04 [TRACE] EvalWriteState: writing current state object for google_bigquery_table.hive_table
+2022/01/17 15:36:04 [TRACE] Re-validating config for "google_bigquery_table.hive_table"
+2022/01/17 15:36:04 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2022/01/17 15:36:04 [TRACE] GRPCProvider: PlanResourceChange
+2022/01/17 15:36:04 [WARN] Provider "registry.terraform.io/hashicorp/google" produced an invalid plan for google_bigquery_table.hive_table, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .schema: planned value cty.StringVal("[{\"mode\":\"NULLABLE\",\"name\":\"column1\",\"type\":\"STRING\"}]") does not match config value cty.StringVal("  [\n    {\n        \"name\": \"column1\",\n        \"type\": \"STRING\",\n        \"mode\": \"NULLABLE\"\n    }\n]\n") nor prior value cty.StringVal("[{\"mode\":\"NULLABLE\",\"name\":\"column1\",\"type\":\"STRING\"},{\"mode\":\"NULLABLE\",\"name\":\"dt\",\"type\":\"STRING\"},{\"mode\":\"NULLABLE\",\"name\":\"hr\",\"type\":\"STRING\"},{\"mode\":\"NULLABLE\",\"name\":\"min\",\"type\":\"STRING\"}]")
+2022/01/17 15:36:04 [TRACE] GRPCProvider: PlanResourceChange
+2022-01-17T15:36:04.076Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:04 [DEBUG] unable to unmarshal old json - unexpected end of JSON input: timestamp=2022-01-17T15:36:04.076Z
+2022-01-17T15:36:04.078Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:04 [DEBUG] unable to unmarshal json customized diff - unexpected end of JSON input: timestamp=2022-01-17T15:36:04.078Z
+2022-01-17T15:36:04.078Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:04 [DEBUG] comparison of generics hit... not expected: timestamp=2022-01-17T15:36:04.078Z
+2022/01/17 15:36:04 [TRACE] EvalWriteState: writing current state object for google_bigquery_table.hive_table
+2022/01/17 15:36:04 [TRACE] EvalWriteDiff: recorded DeleteThenCreate change for google_bigquery_table.hive_table
+2022/01/17 15:36:04 [TRACE] vertex "google_bigquery_table.hive_table": visit complete
+2022/01/17 15:36:04 [TRACE] vertex "google_bigquery_table.hive_table": dynamic subgraph completed successfully
+2022/01/17 15:36:04 [TRACE] vertex "google_bigquery_table.hive_table": visit complete
+2022/01/17 15:36:04 [TRACE] vertex "google_bigquery_table.hive_table (expand)": dynamic subgraph completed successfully
+2022/01/17 15:36:04 [TRACE] vertex "google_bigquery_table.hive_table (expand)": visit complete
+2022/01/17 15:36:04 [TRACE] dag/walk: visiting "meta.count-boundary (EachMode fixup)"
+2022/01/17 15:36:04 [TRACE] dag/walk: visiting "provider[\"registry.terraform.io/hashicorp/google\"] (close)"
+2022/01/17 15:36:04 [TRACE] vertex "meta.count-boundary (EachMode fixup)": starting visit (*terraform.NodeCountBoundary)
+2022/01/17 15:36:04 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/google\"] (close)": starting visit (*terraform.graphNodeCloseProvider)
+2022/01/17 15:36:04 [TRACE] GRPCProvider: Close
+2022/01/17 15:36:04 [TRACE] vertex "meta.count-boundary (EachMode fixup)": visit complete
+2022-01-17T15:36:04.080Z [WARN]  plugin.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = transport is closing"
+2022-01-17T15:36:04.080Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:04 [WARN] Invalid log level: "DBUG". Defaulting to level: TRACE. Valid levels are: [TRACE DEBUG INFO WARN ERROR]: timestamp=2022-01-17T15:36:04.080Z
+2022-01-17T15:36:04.084Z [DEBUG] plugin: plugin process exited: path=.terraform/providers/registry.terraform.io/hashicorp/google/4.5.0/darwin_amd64/terraform-provider-google_v4.5.0_x5 pid=54099
+2022-01-17T15:36:04.084Z [DEBUG] plugin: plugin exited
+2022/01/17 15:36:04 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/google\"] (close)": visit complete
+2022/01/17 15:36:04 [TRACE] dag/walk: visiting "root"
+2022/01/17 15:36:04 [TRACE] vertex "root": starting visit (*terraform.nodeCloseModule)
+2022/01/17 15:36:04 [TRACE] vertex "root": visit complete
+
+An execution plan has been generated and is shown below.
+Resource actions are indicated with the following symbols:
+-/+ destroy and then create replacement
+
+Terraform will perform the following actions:
+
+2022/01/17 15:36:04 [DEBUG] command: asking for input: "Do you want to perform these actions?"
+  # google_bigquery_table.hive_table must be replaced
+-/+ resource "google_bigquery_table" "hive_table" {
+      ~ creation_time       = 1642433667935 -> (known after apply)
+      ~ etag                = "jf2DCnVsB1knWWnx2a6/BA==" -> (known after apply)
+      ~ expiration_time     = 0 -> (known after apply)
+      ~ id                  = "projects/msm-groupdata-datalake-dev/datasets/hive_store/tables/messages" -> (known after apply)
+      - labels              = {} -> null
+      ~ last_modified_time  = 1642433668199 -> (known after apply)
+      ~ location            = "EU" -> (known after apply)
+      ~ num_bytes           = 0 -> (known after apply)
+      ~ num_long_term_bytes = 0 -> (known after apply)
+      ~ num_rows            = 0 -> (known after apply)
+      ~ schema              = jsonencode(
+          ~ [ # forces replacement
+                {
+                    mode = "NULLABLE"
+                    name = "column1"
+                    type = "STRING"
+                },
+              - {
+                  - mode = "NULLABLE"
+                  - name = "dt"
+                  - type = "STRING"
+                },
+              - {
+                  - mode = "NULLABLE"
+                  - name = "hr"
+                  - type = "STRING"
+                },
+              - {
+                  - mode = "NULLABLE"
+                  - name = "min"
+                  - type = "STRING"
+                },
+            ]
+        )
+      ~ self_link           = "https://bigquery.googleapis.com/bigquery/v2/projects/msm-groupdata-datalake-dev/datasets/hive_store/tables/messages" -> (known after apply)
+      ~ type                = "EXTERNAL" -> (known after apply)
+        # (4 unchanged attributes hidden)
+
+      ~ external_data_configuration {
+          - ignore_unknown_values = false -> null
+          - max_bad_records       = 0 -> null
+          + schema                = (known after apply)
+            # (4 unchanged attributes hidden)
+
+            # (1 unchanged block hidden)
+        }
+    }
+
+Plan: 1 to add, 0 to change, 1 to destroy.
+
+Do you want to perform these actions?
+  Terraform will perform the actions described above.
+  Only 'yes' will be accepted to approve.
+
+  Enter a value: yes
+
+
+2022/01/17 15:36:05 [INFO] backend/local: apply calling Apply
+2022/01/17 15:36:05 [INFO] terraform: building graph: GraphTypeApply
+2022/01/17 15:36:05 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2022/01/17 15:36:05 [TRACE] ConfigTransformer: Starting for path:
+2022/01/17 15:36:05 [TRACE] Completed graph transform *terraform.ConfigTransformer with new graph:
+  google_bigquery_dataset.hive_store (expand) - *terraform.nodeExpandApplyableResource
+  google_bigquery_table.hive_table (expand) - *terraform.nodeExpandApplyableResource
+  google_storage_bucket.bucket (expand) - *terraform.nodeExpandApplyableResource
+  google_storage_bucket_object.fake_message (expand) - *terraform.nodeExpandApplyableResource
+  ------
+2022/01/17 15:36:05 [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2022/01/17 15:36:05 [TRACE] Completed graph transform *terraform.RootVariableTransformer with new graph:
+  google_bigquery_dataset.hive_store (expand) - *terraform.nodeExpandApplyableResource
+  google_bigquery_table.hive_table (expand) - *terraform.nodeExpandApplyableResource
+  google_storage_bucket.bucket (expand) - *terraform.nodeExpandApplyableResource
+  google_storage_bucket_object.fake_message (expand) - *terraform.nodeExpandApplyableResource
+  var.project - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  ------
+2022/01/17 15:36:05 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2022/01/17 15:36:05 [TRACE] Completed graph transform *terraform.ModuleVariableTransformer (no changes)
+2022/01/17 15:36:05 [TRACE] Executing graph transform *terraform.LocalTransformer
+2022/01/17 15:36:05 [TRACE] Completed graph transform *terraform.LocalTransformer (no changes)
+2022/01/17 15:36:05 [TRACE] Executing graph transform *terraform.OutputTransformer
+2022/01/17 15:36:05 [TRACE] Completed graph transform *terraform.OutputTransformer (no changes)
+2022/01/17 15:36:05 [TRACE] Executing graph transform *terraform.DiffTransformer
+2022/01/17 15:36:05 [TRACE] DiffTransformer starting
+2022/01/17 15:36:05 [TRACE] DiffTransformer: found NoOp change for google_storage_bucket.bucket
+2022/01/17 15:36:05 [TRACE] DiffTransformer: found NoOp change for google_storage_bucket_object.fake_message
+2022/01/17 15:36:05 [TRACE] DiffTransformer: found NoOp change for google_bigquery_dataset.hive_store
+2022/01/17 15:36:05 [TRACE] DiffTransformer: found DeleteThenCreate change for google_bigquery_table.hive_table
+2022/01/17 15:36:05 [TRACE] DiffTransformer: google_bigquery_table.hive_table will be represented by google_bigquery_table.hive_table
+2022/01/17 15:36:05 [TRACE] DiffTransformer: google_bigquery_table.hive_table will be represented for destruction by google_bigquery_table.hive_table (destroy)
+2022/01/17 15:36:05 [TRACE] DiffTransformer complete
+2022/01/17 15:36:05 [TRACE] Completed graph transform *terraform.DiffTransformer with new graph:
+  google_bigquery_dataset.hive_store (expand) - *terraform.nodeExpandApplyableResource
+  google_bigquery_table.hive_table - *terraform.NodeApplyableResourceInstance
+    google_bigquery_table.hive_table (expand) - *terraform.nodeExpandApplyableResource
+  google_bigquery_table.hive_table (destroy) - *terraform.NodeDestroyResourceInstance
+  google_bigquery_table.hive_table (expand) - *terraform.nodeExpandApplyableResource
+  google_storage_bucket.bucket (expand) - *terraform.nodeExpandApplyableResource
+  google_storage_bucket_object.fake_message (expand) - *terraform.nodeExpandApplyableResource
+  var.project - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  ------
+2022/01/17 15:36:05 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2022/01/17 15:36:05 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2022/01/17 15:36:05 [TRACE] Executing graph transform *terraform.OrphanOutputTransformer
+2022/01/17 15:36:05 [TRACE] Completed graph transform *terraform.OrphanOutputTransformer (no changes)
+2022/01/17 15:36:05 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2022/01/17 15:36:05 [TRACE] AttachResourceConfigTransformer: attaching to "google_bigquery_dataset.hive_store (expand)" (*terraform.nodeExpandApplyableResource) config from main.tf:36,1-48
+2022/01/17 15:36:05 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to google_bigquery_dataset.hive_store (expand)
+2022/01/17 15:36:05 [TRACE] AttachResourceConfigTransformer: attaching to "google_bigquery_table.hive_table (expand)" (*terraform.nodeExpandApplyableResource) config from main.tf:42,1-46
+2022/01/17 15:36:05 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to google_bigquery_table.hive_table (expand)
+2022/01/17 15:36:05 [TRACE] AttachResourceConfigTransformer: attaching to "google_storage_bucket.bucket (expand)" (*terraform.nodeExpandApplyableResource) config from main.tf:16,1-42
+2022/01/17 15:36:05 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to google_storage_bucket.bucket (expand)
+2022/01/17 15:36:05 [TRACE] AttachResourceConfigTransformer: attaching to "google_bigquery_table.hive_table" (*terraform.NodeApplyableResourceInstance) config from main.tf:42,1-46
+2022/01/17 15:36:05 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to google_bigquery_table.hive_table
+2022/01/17 15:36:05 [TRACE] AttachResourceConfigTransformer: attaching to "google_bigquery_table.hive_table (destroy)" (*terraform.NodeDestroyResourceInstance) config from main.tf:42,1-46
+2022/01/17 15:36:05 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to google_bigquery_table.hive_table (destroy)
+2022/01/17 15:36:05 [TRACE] AttachResourceConfigTransformer: attaching to "google_storage_bucket_object.fake_message (expand)" (*terraform.nodeExpandApplyableResource) config from main.tf:22,1-55
+2022/01/17 15:36:05 [TRACE] AttachResourceConfigTransformer: attaching provider meta configs to google_storage_bucket_object.fake_message (expand)
+2022/01/17 15:36:05 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
+2022/01/17 15:36:05 [TRACE] Executing graph transform *terraform.MissingProvisionerTransformer
+2022/01/17 15:36:05 [TRACE] Completed graph transform *terraform.MissingProvisionerTransformer (no changes)
+2022/01/17 15:36:05 [TRACE] Executing graph transform *terraform.ProvisionerTransformer
+2022/01/17 15:36:05 [TRACE] Completed graph transform *terraform.ProvisionerTransformer (no changes)
+2022/01/17 15:36:05 [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2022/01/17 15:36:05 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2022/01/17 15:36:05 [TRACE] ProviderConfigTransformer: attaching to "provider[\"registry.terraform.io/hashicorp/google\"]" provider configuration from main.tf:12,1-18
+2022/01/17 15:36:05 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+  google_bigquery_dataset.hive_store (expand) - *terraform.nodeExpandApplyableResource
+  google_bigquery_table.hive_table - *terraform.NodeApplyableResourceInstance
+    google_bigquery_table.hive_table (expand) - *terraform.nodeExpandApplyableResource
+  google_bigquery_table.hive_table (destroy) - *terraform.NodeDestroyResourceInstance
+  google_bigquery_table.hive_table (expand) - *terraform.nodeExpandApplyableResource
+  google_storage_bucket.bucket (expand) - *terraform.nodeExpandApplyableResource
+  google_storage_bucket_object.fake_message (expand) - *terraform.nodeExpandApplyableResource
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  var.project - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  ------
+2022/01/17 15:36:05 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2022/01/17 15:36:05 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer (no changes)
+2022/01/17 15:36:05 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2022/01/17 15:36:05 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/google"] serving google_bigquery_table.hive_table
+2022/01/17 15:36:05 [DEBUG] ProviderTransformer: "google_bigquery_table.hive_table" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/hashicorp/google"]
+2022/01/17 15:36:05 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/google"] serving google_storage_bucket_object.fake_message (expand)
+2022/01/17 15:36:05 [DEBUG] ProviderTransformer: "google_storage_bucket_object.fake_message (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2022/01/17 15:36:05 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/google"] serving google_bigquery_table.hive_table (destroy)
+2022/01/17 15:36:05 [DEBUG] ProviderTransformer: "google_bigquery_table.hive_table (destroy)" (*terraform.NodeDestroyResourceInstance) needs provider["registry.terraform.io/hashicorp/google"]
+2022/01/17 15:36:05 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/google"] serving google_bigquery_dataset.hive_store (expand)
+2022/01/17 15:36:05 [DEBUG] ProviderTransformer: "google_bigquery_dataset.hive_store (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2022/01/17 15:36:05 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/google"] serving google_bigquery_table.hive_table (expand)
+2022/01/17 15:36:05 [DEBUG] ProviderTransformer: "google_bigquery_table.hive_table (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2022/01/17 15:36:05 [TRACE] ProviderTransformer: exact match for provider["registry.terraform.io/hashicorp/google"] serving google_storage_bucket.bucket (expand)
+2022/01/17 15:36:05 [DEBUG] ProviderTransformer: "google_storage_bucket.bucket (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2022/01/17 15:36:05 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer with new graph:
+  google_bigquery_dataset.hive_store (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_bigquery_table.hive_table - *terraform.NodeApplyableResourceInstance
+    google_bigquery_table.hive_table (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_bigquery_table.hive_table (destroy) - *terraform.NodeDestroyResourceInstance
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_bigquery_table.hive_table (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_storage_bucket.bucket (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_storage_bucket_object.fake_message (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  var.project - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  ------
+2022/01/17 15:36:05 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2022/01/17 15:36:05 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer (no changes)
+2022/01/17 15:36:05 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ParentProviderTransformer
+2022/01/17 15:36:05 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ParentProviderTransformer (no changes)
+2022/01/17 15:36:05 [TRACE] Completed graph transform *terraform.graphTransformerMulti with new graph:
+  google_bigquery_dataset.hive_store (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_bigquery_table.hive_table - *terraform.NodeApplyableResourceInstance
+    google_bigquery_table.hive_table (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_bigquery_table.hive_table (destroy) - *terraform.NodeDestroyResourceInstance
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_bigquery_table.hive_table (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_storage_bucket.bucket (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_storage_bucket_object.fake_message (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  var.project - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  ------
+2022/01/17 15:36:05 [TRACE] Executing graph transform *terraform.RemovedModuleTransformer
+2022/01/17 15:36:05 [TRACE] Completed graph transform *terraform.RemovedModuleTransformer (no changes)
+2022/01/17 15:36:05 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2022/01/17 15:36:05 [TRACE] AttachSchemaTransformer: attaching resource schema to google_bigquery_table.hive_table (destroy)
+2022/01/17 15:36:05 [TRACE] AttachSchemaTransformer: attaching provider config schema to provider["registry.terraform.io/hashicorp/google"]
+2022/01/17 15:36:05 [TRACE] AttachSchemaTransformer: attaching resource schema to google_bigquery_dataset.hive_store (expand)
+2022/01/17 15:36:05 [TRACE] AttachSchemaTransformer: attaching resource schema to google_storage_bucket.bucket (expand)
+2022/01/17 15:36:05 [TRACE] AttachSchemaTransformer: attaching resource schema to google_bigquery_table.hive_table
+2022/01/17 15:36:05 [TRACE] AttachSchemaTransformer: attaching resource schema to google_storage_bucket_object.fake_message (expand)
+2022/01/17 15:36:05 [TRACE] AttachSchemaTransformer: attaching resource schema to google_bigquery_table.hive_table (expand)
+2022/01/17 15:36:05 [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
+2022/01/17 15:36:05 [TRACE] Executing graph transform *terraform.ModuleExpansionTransformer
+2022/01/17 15:36:05 [TRACE] Completed graph transform *terraform.ModuleExpansionTransformer (no changes)
+2022/01/17 15:36:05 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2022/01/17 15:36:05 [DEBUG] ReferenceTransformer: "google_bigquery_dataset.hive_store (expand)" references: []
+2022/01/17 15:36:05 [DEBUG] ReferenceTransformer: "var.project" references: []
+2022/01/17 15:36:05 [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/hashicorp/google\"]" references: [var.region]
+2022/01/17 15:36:05 [DEBUG] ReferenceTransformer: "google_storage_bucket_object.fake_message (expand)" references: []
+2022/01/17 15:36:05 [DEBUG] ReferenceTransformer: "google_bigquery_table.hive_table (expand)" references: []
+2022/01/17 15:36:05 [DEBUG] ReferenceTransformer: "google_storage_bucket.bucket (expand)" references: []
+2022/01/17 15:36:05 [DEBUG] ReferenceTransformer: "var.region" references: []
+2022/01/17 15:36:05 [INFO] ReferenceTransformer: reference not found: "google_storage_bucket_object.fake_message#destroy"
+2022/01/17 15:36:05 [DEBUG] ReferenceTransformer: "google_bigquery_table.hive_table" references: [google_storage_bucket_object.fake_message (expand) google_bigquery_dataset.hive_store (expand) var.project google_storage_bucket.bucket (expand) google_storage_bucket.bucket (expand)]
+2022/01/17 15:36:05 [TRACE] Completed graph transform *terraform.ReferenceTransformer with new graph:
+  google_bigquery_dataset.hive_store (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_bigquery_table.hive_table - *terraform.NodeApplyableResourceInstance
+    google_bigquery_dataset.hive_store (expand) - *terraform.nodeExpandApplyableResource
+    google_bigquery_table.hive_table (expand) - *terraform.nodeExpandApplyableResource
+    google_storage_bucket.bucket (expand) - *terraform.nodeExpandApplyableResource
+    google_storage_bucket_object.fake_message (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.project - *terraform.NodeRootVariable
+  google_bigquery_table.hive_table (destroy) - *terraform.NodeDestroyResourceInstance
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_bigquery_table.hive_table (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_storage_bucket.bucket (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_storage_bucket_object.fake_message (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.region - *terraform.NodeRootVariable
+  var.project - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  ------
+2022/01/17 15:36:05 [TRACE] Executing graph transform *terraform.AttachDependenciesTransformer
+2022/01/17 15:36:05 [TRACE] AttachDependenciesTransformer: google_bigquery_table.hive_table depends on [google_bigquery_dataset.hive_store google_storage_bucket.bucket google_storage_bucket_object.fake_message]
+2022/01/17 15:36:05 [TRACE] Completed graph transform *terraform.AttachDependenciesTransformer (no changes)
+2022/01/17 15:36:05 [TRACE] Executing graph transform *terraform.ForcedCBDTransformer
+2022/01/17 15:36:05 [TRACE] ForcedCBDTransformer: "google_bigquery_table.hive_table" (*terraform.NodeApplyableResourceInstance) has no CBD descendent, so skipping
+2022/01/17 15:36:05 [TRACE] ForcedCBDTransformer: "google_bigquery_table.hive_table (destroy)" (*terraform.NodeDestroyResourceInstance) has no CBD descendent, so skipping
+2022/01/17 15:36:05 [TRACE] Completed graph transform *terraform.ForcedCBDTransformer (no changes)
+2022/01/17 15:36:05 [TRACE] Executing graph transform *terraform.DestroyEdgeTransformer
+2022/01/17 15:36:05 [TRACE] DestroyEdgeTransformer: "google_bigquery_table.hive_table (destroy)" (*terraform.NodeDestroyResourceInstance) destroys google_bigquery_table.hive_table
+2022/01/17 15:36:05 [TRACE] DestroyEdgeTransformer: connecting creator "google_bigquery_table.hive_table" with destroyer "google_bigquery_table.hive_table (destroy)"
+2022/01/17 15:36:05 [TRACE] Completed graph transform *terraform.DestroyEdgeTransformer with new graph:
+  google_bigquery_dataset.hive_store (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_bigquery_table.hive_table - *terraform.NodeApplyableResourceInstance
+    google_bigquery_dataset.hive_store (expand) - *terraform.nodeExpandApplyableResource
+    google_bigquery_table.hive_table (destroy) - *terraform.NodeDestroyResourceInstance
+    google_bigquery_table.hive_table (expand) - *terraform.nodeExpandApplyableResource
+    google_storage_bucket.bucket (expand) - *terraform.nodeExpandApplyableResource
+    google_storage_bucket_object.fake_message (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.project - *terraform.NodeRootVariable
+  google_bigquery_table.hive_table (destroy) - *terraform.NodeDestroyResourceInstance
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_bigquery_table.hive_table (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_storage_bucket.bucket (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_storage_bucket_object.fake_message (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.region - *terraform.NodeRootVariable
+  var.project - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  ------
+2022/01/17 15:36:05 [TRACE] Executing graph transform *terraform.CBDEdgeTransformer
+2022/01/17 15:36:05 [TRACE] Completed graph transform *terraform.CBDEdgeTransformer (no changes)
+2022/01/17 15:36:05 [TRACE] Executing graph transform *terraform.pruneUnusedNodesTransformer
+2022/01/17 15:36:05 [TRACE] Completed graph transform *terraform.pruneUnusedNodesTransformer (no changes)
+2022/01/17 15:36:05 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2022/01/17 15:36:05 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2022/01/17 15:36:05 [TRACE] Executing graph transform *terraform.CountBoundaryTransformer
+2022/01/17 15:36:05 [TRACE] Completed graph transform *terraform.CountBoundaryTransformer with new graph:
+  google_bigquery_dataset.hive_store (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_bigquery_table.hive_table - *terraform.NodeApplyableResourceInstance
+    google_bigquery_dataset.hive_store (expand) - *terraform.nodeExpandApplyableResource
+    google_bigquery_table.hive_table (destroy) - *terraform.NodeDestroyResourceInstance
+    google_bigquery_table.hive_table (expand) - *terraform.nodeExpandApplyableResource
+    google_storage_bucket.bucket (expand) - *terraform.nodeExpandApplyableResource
+    google_storage_bucket_object.fake_message (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.project - *terraform.NodeRootVariable
+  google_bigquery_table.hive_table (destroy) - *terraform.NodeDestroyResourceInstance
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_bigquery_table.hive_table (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_storage_bucket.bucket (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_storage_bucket_object.fake_message (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    google_bigquery_dataset.hive_store (expand) - *terraform.nodeExpandApplyableResource
+    google_bigquery_table.hive_table - *terraform.NodeApplyableResourceInstance
+    google_bigquery_table.hive_table (destroy) - *terraform.NodeDestroyResourceInstance
+    google_bigquery_table.hive_table (expand) - *terraform.nodeExpandApplyableResource
+    google_storage_bucket.bucket (expand) - *terraform.nodeExpandApplyableResource
+    google_storage_bucket_object.fake_message (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.project - *terraform.NodeRootVariable
+    var.region - *terraform.NodeRootVariable
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.region - *terraform.NodeRootVariable
+  var.project - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  ------
+2022/01/17 15:36:05 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2022/01/17 15:36:05 [TRACE] Completed graph transform *terraform.CloseProviderTransformer with new graph:
+  google_bigquery_dataset.hive_store (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_bigquery_table.hive_table - *terraform.NodeApplyableResourceInstance
+    google_bigquery_dataset.hive_store (expand) - *terraform.nodeExpandApplyableResource
+    google_bigquery_table.hive_table (destroy) - *terraform.NodeDestroyResourceInstance
+    google_bigquery_table.hive_table (expand) - *terraform.nodeExpandApplyableResource
+    google_storage_bucket.bucket (expand) - *terraform.nodeExpandApplyableResource
+    google_storage_bucket_object.fake_message (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.project - *terraform.NodeRootVariable
+  google_bigquery_table.hive_table (destroy) - *terraform.NodeDestroyResourceInstance
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_bigquery_table.hive_table (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_storage_bucket.bucket (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_storage_bucket_object.fake_message (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    google_bigquery_dataset.hive_store (expand) - *terraform.nodeExpandApplyableResource
+    google_bigquery_table.hive_table - *terraform.NodeApplyableResourceInstance
+    google_bigquery_table.hive_table (destroy) - *terraform.NodeDestroyResourceInstance
+    google_bigquery_table.hive_table (expand) - *terraform.nodeExpandApplyableResource
+    google_storage_bucket.bucket (expand) - *terraform.nodeExpandApplyableResource
+    google_storage_bucket_object.fake_message (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.project - *terraform.NodeRootVariable
+    var.region - *terraform.NodeRootVariable
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.region - *terraform.NodeRootVariable
+  provider["registry.terraform.io/hashicorp/google"] (close) - *terraform.graphNodeCloseProvider
+    google_bigquery_dataset.hive_store (expand) - *terraform.nodeExpandApplyableResource
+    google_bigquery_table.hive_table - *terraform.NodeApplyableResourceInstance
+    google_bigquery_table.hive_table (destroy) - *terraform.NodeDestroyResourceInstance
+    google_bigquery_table.hive_table (expand) - *terraform.nodeExpandApplyableResource
+    google_storage_bucket.bucket (expand) - *terraform.nodeExpandApplyableResource
+    google_storage_bucket_object.fake_message (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  var.project - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  ------
+2022/01/17 15:36:05 [TRACE] Executing graph transform *terraform.CloseProvisionerTransformer
+2022/01/17 15:36:05 [TRACE] Completed graph transform *terraform.CloseProvisionerTransformer (no changes)
+2022/01/17 15:36:05 [TRACE] Executing graph transform *terraform.CloseRootModuleTransformer
+2022/01/17 15:36:05 [TRACE] Completed graph transform *terraform.CloseRootModuleTransformer with new graph:
+  google_bigquery_dataset.hive_store (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_bigquery_table.hive_table - *terraform.NodeApplyableResourceInstance
+    google_bigquery_dataset.hive_store (expand) - *terraform.nodeExpandApplyableResource
+    google_bigquery_table.hive_table (destroy) - *terraform.NodeDestroyResourceInstance
+    google_bigquery_table.hive_table (expand) - *terraform.nodeExpandApplyableResource
+    google_storage_bucket.bucket (expand) - *terraform.nodeExpandApplyableResource
+    google_storage_bucket_object.fake_message (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.project - *terraform.NodeRootVariable
+  google_bigquery_table.hive_table (destroy) - *terraform.NodeDestroyResourceInstance
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_bigquery_table.hive_table (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_storage_bucket.bucket (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_storage_bucket_object.fake_message (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    google_bigquery_dataset.hive_store (expand) - *terraform.nodeExpandApplyableResource
+    google_bigquery_table.hive_table - *terraform.NodeApplyableResourceInstance
+    google_bigquery_table.hive_table (destroy) - *terraform.NodeDestroyResourceInstance
+    google_bigquery_table.hive_table (expand) - *terraform.nodeExpandApplyableResource
+    google_storage_bucket.bucket (expand) - *terraform.nodeExpandApplyableResource
+    google_storage_bucket_object.fake_message (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.project - *terraform.NodeRootVariable
+    var.region - *terraform.NodeRootVariable
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.region - *terraform.NodeRootVariable
+  provider["registry.terraform.io/hashicorp/google"] (close) - *terraform.graphNodeCloseProvider
+    google_bigquery_dataset.hive_store (expand) - *terraform.nodeExpandApplyableResource
+    google_bigquery_table.hive_table - *terraform.NodeApplyableResourceInstance
+    google_bigquery_table.hive_table (destroy) - *terraform.NodeDestroyResourceInstance
+    google_bigquery_table.hive_table (expand) - *terraform.nodeExpandApplyableResource
+    google_storage_bucket.bucket (expand) - *terraform.nodeExpandApplyableResource
+    google_storage_bucket_object.fake_message (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  root - *terraform.nodeCloseModule
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider["registry.terraform.io/hashicorp/google"] (close) - *terraform.graphNodeCloseProvider
+  var.project - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  ------
+2022/01/17 15:36:05 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2022/01/17 15:36:05 [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer with new graph:
+  google_bigquery_dataset.hive_store (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_bigquery_table.hive_table - *terraform.NodeApplyableResourceInstance
+    google_bigquery_dataset.hive_store (expand) - *terraform.nodeExpandApplyableResource
+    google_bigquery_table.hive_table (destroy) - *terraform.NodeDestroyResourceInstance
+    google_bigquery_table.hive_table (expand) - *terraform.nodeExpandApplyableResource
+    google_storage_bucket.bucket (expand) - *terraform.nodeExpandApplyableResource
+    google_storage_bucket_object.fake_message (expand) - *terraform.nodeExpandApplyableResource
+    var.project - *terraform.NodeRootVariable
+  google_bigquery_table.hive_table (destroy) - *terraform.NodeDestroyResourceInstance
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_bigquery_table.hive_table (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_storage_bucket.bucket (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  google_storage_bucket_object.fake_message (expand) - *terraform.nodeExpandApplyableResource
+    provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    google_bigquery_table.hive_table - *terraform.NodeApplyableResourceInstance
+  provider["registry.terraform.io/hashicorp/google"] - *terraform.NodeApplyableProvider
+    var.region - *terraform.NodeRootVariable
+  provider["registry.terraform.io/hashicorp/google"] (close) - *terraform.graphNodeCloseProvider
+    google_bigquery_table.hive_table - *terraform.NodeApplyableResourceInstance
+  root - *terraform.nodeCloseModule
+    meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+    provider["registry.terraform.io/hashicorp/google"] (close) - *terraform.graphNodeCloseProvider
+  var.project - *terraform.NodeRootVariable
+  var.region - *terraform.NodeRootVariable
+  ------
+2022/01/17 15:36:05 [DEBUG] Starting graph walk: walkApply
+2022/01/17 15:36:05 [TRACE] dag/walk: visiting "var.region"
+2022/01/17 15:36:05 [TRACE] vertex "var.region": starting visit (*terraform.NodeRootVariable)
+2022/01/17 15:36:05 [TRACE] dag/walk: visiting "var.project"
+2022/01/17 15:36:05 [TRACE] vertex "var.region": visit complete
+2022/01/17 15:36:05 [TRACE] vertex "var.project": starting visit (*terraform.NodeRootVariable)
+2022/01/17 15:36:05 [TRACE] vertex "var.project": visit complete
+2022/01/17 15:36:05 [TRACE] dag/walk: visiting "provider[\"registry.terraform.io/hashicorp/google\"]"
+2022/01/17 15:36:05 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/google\"]": starting visit (*terraform.NodeApplyableProvider)
+2022-01-17T15:36:05.355Z [INFO]  plugin: configuring client automatic mTLS
+2022-01-17T15:36:05.393Z [DEBUG] plugin: starting plugin: path=.terraform/providers/registry.terraform.io/hashicorp/google/4.5.0/darwin_amd64/terraform-provider-google_v4.5.0_x5 args=[.terraform/providers/registry.terraform.io/hashicorp/google/4.5.0/darwin_amd64/terraform-provider-google_v4.5.0_x5]
+2022-01-17T15:36:05.400Z [DEBUG] plugin: plugin started: path=.terraform/providers/registry.terraform.io/hashicorp/google/4.5.0/darwin_amd64/terraform-provider-google_v4.5.0_x5 pid=54101
+2022-01-17T15:36:05.400Z [DEBUG] plugin: waiting for RPC address: path=.terraform/providers/registry.terraform.io/hashicorp/google/4.5.0/darwin_amd64/terraform-provider-google_v4.5.0_x5
+2022-01-17T15:36:05.429Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: configuring server automatic mTLS: timestamp=2022-01-17T15:36:05.429Z
+2022-01-17T15:36:05.472Z [DEBUG] plugin.terraform-provider-google_v4.5.0_x5: plugin address: address=/var/folders/6y/709fn7mx2_q8r5br55hztqnw0000gp/T/plugin008543024 network=unix timestamp=2022-01-17T15:36:05.472Z
+2022-01-17T15:36:05.472Z [DEBUG] plugin: using plugin: version=5
+2022/01/17 15:36:05 [TRACE] BuiltinEvalContext: Initialized "provider[\"registry.terraform.io/hashicorp/google\"]" provider for provider["registry.terraform.io/hashicorp/google"]
+2022/01/17 15:36:05 [TRACE] buildProviderConfig for provider["registry.terraform.io/hashicorp/google"]: using explicit config only
+2022/01/17 15:36:05 [TRACE] GRPCProvider: GetSchema
+2022-01-17T15:36:05.518Z [TRACE] plugin.stdio: waiting for stdio data
+2022/01/17 15:36:05 [TRACE] GRPCProvider: Configure
+2022-01-17T15:36:05.568Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:05 [INFO] Authenticating using DefaultClient...: timestamp=2022-01-17T15:36:05.568Z
+2022-01-17T15:36:05.568Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:05 [INFO]   -- Scopes: [https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/userinfo.email]: timestamp=2022-01-17T15:36:05.568Z
+2022-01-17T15:36:05.568Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:05 [INFO] Authenticating using DefaultClient...: timestamp=2022-01-17T15:36:05.568Z
+2022-01-17T15:36:05.568Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:05 [INFO]   -- Scopes: [https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/userinfo.email]: timestamp=2022-01-17T15:36:05.568Z
+2022-01-17T15:36:05.568Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:05 [DEBUG] Waiting for state to become: [success]: timestamp=2022-01-17T15:36:05.568Z
+2022-01-17T15:36:05.993Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:05 [INFO] Terraform is using this identity: jamie.thomson@moneysupermarketgroup.com: timestamp=2022-01-17T15:36:05.993Z
+2022/01/17 15:36:05 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/google\"]": visit complete
+2022/01/17 15:36:05 [TRACE] dag/walk: visiting "google_bigquery_table.hive_table (destroy)"
+2022/01/17 15:36:05 [TRACE] vertex "google_bigquery_table.hive_table (destroy)": starting visit (*terraform.NodeDestroyResourceInstance)
+2022/01/17 15:36:05 [TRACE] dag/walk: visiting "google_bigquery_dataset.hive_store (expand)"
+2022/01/17 15:36:05 [TRACE] dag/walk: visiting "google_bigquery_table.hive_table (expand)"
+2022/01/17 15:36:05 [TRACE] dag/walk: visiting "google_storage_bucket.bucket (expand)"
+2022/01/17 15:36:05 [TRACE] vertex "google_bigquery_dataset.hive_store (expand)": starting visit (*terraform.nodeExpandApplyableResource)
+2022/01/17 15:36:05 [TRACE] vertex "google_storage_bucket.bucket (expand)": starting visit (*terraform.nodeExpandApplyableResource)
+2022/01/17 15:36:05 [TRACE] vertex "google_storage_bucket.bucket (expand)": expanding dynamic subgraph
+2022/01/17 15:36:05 [TRACE] vertex "google_bigquery_dataset.hive_store (expand)": expanding dynamic subgraph
+2022/01/17 15:36:05 [TRACE] vertex "google_storage_bucket.bucket (expand)": entering dynamic subgraph
+2022/01/17 15:36:05 [TRACE] dag/walk: visiting "google_storage_bucket_object.fake_message (expand)"
+2022/01/17 15:36:05 [TRACE] vertex "google_bigquery_table.hive_table (expand)": starting visit (*terraform.nodeExpandApplyableResource)
+2022/01/17 15:36:05 [TRACE] vertex "google_storage_bucket_object.fake_message (expand)": starting visit (*terraform.nodeExpandApplyableResource)
+2022/01/17 15:36:05 [TRACE] vertex "google_bigquery_table.hive_table (expand)": expanding dynamic subgraph
+2022/01/17 15:36:05 [TRACE] dag/walk: visiting "google_storage_bucket.bucket"
+2022/01/17 15:36:05 [TRACE] vertex "google_storage_bucket_object.fake_message (expand)": expanding dynamic subgraph
+2022/01/17 15:36:05 [TRACE] vertex "google_storage_bucket.bucket": starting visit (*terraform.NodeApplyableResource)
+2022/01/17 15:36:05 [TRACE] vertex "google_storage_bucket_object.fake_message (expand)": entering dynamic subgraph
+2022/01/17 15:36:05 [TRACE] vertex "google_storage_bucket.bucket": visit complete
+2022/01/17 15:36:05 [TRACE] vertex "google_bigquery_dataset.hive_store (expand)": entering dynamic subgraph
+2022/01/17 15:36:05 [TRACE] vertex "google_storage_bucket.bucket (expand)": dynamic subgraph completed successfully
+2022/01/17 15:36:05 [TRACE] vertex "google_storage_bucket.bucket (expand)": visit complete
+2022/01/17 15:36:05 [TRACE] vertex "google_bigquery_table.hive_table (expand)": entering dynamic subgraph
+2022/01/17 15:36:05 [TRACE] dag/walk: visiting "google_storage_bucket_object.fake_message"
+2022/01/17 15:36:05 [TRACE] vertex "google_storage_bucket_object.fake_message": starting visit (*terraform.NodeApplyableResource)
+2022/01/17 15:36:05 [TRACE] dag/walk: visiting "google_bigquery_dataset.hive_store"
+2022/01/17 15:36:05 [TRACE] vertex "google_bigquery_dataset.hive_store": starting visit (*terraform.NodeApplyableResource)
+2022/01/17 15:36:05 [TRACE] vertex "google_storage_bucket_object.fake_message": visit complete
+2022/01/17 15:36:05 [TRACE] dag/walk: visiting "google_bigquery_table.hive_table"
+2022/01/17 15:36:05 [TRACE] vertex "google_storage_bucket_object.fake_message (expand)": dynamic subgraph completed successfully
+2022/01/17 15:36:05 [TRACE] EvalReadDiff: Read DeleteThenCreate change from plan for google_bigquery_table.hive_table
+2022/01/17 15:36:05 [TRACE] vertex "google_storage_bucket_object.fake_message (expand)": visit complete
+2022/01/17 15:36:05 [TRACE] vertex "google_bigquery_table.hive_table": starting visit (*terraform.NodeApplyableResource)
+2022/01/17 15:36:05 [TRACE] EvalReduceDiff: google_bigquery_table.hive_table change simplified from DeleteThenCreate to Delete for destroy node
+2022/01/17 15:36:05 [TRACE] vertex "google_bigquery_table.hive_table": visit complete
+2022/01/17 15:36:05 [TRACE] vertex "google_bigquery_table.hive_table (expand)": dynamic subgraph completed successfully
+2022/01/17 15:36:05 [TRACE] vertex "google_bigquery_table.hive_table (expand)": visit complete
+2022/01/17 15:36:05 [TRACE] ReadResourceInstanceState: reading state for google_bigquery_table.hive_table
+2022/01/17 15:36:05 [TRACE] vertex "google_bigquery_dataset.hive_store": visit complete
+2022/01/17 15:36:05 [TRACE] vertex "google_bigquery_dataset.hive_store (expand)": dynamic subgraph completed successfully
+2022/01/17 15:36:05 [TRACE] vertex "google_bigquery_dataset.hive_store (expand)": visit complete
+2022/01/17 15:36:05 [TRACE] UpgradeResourceState: schema version of google_bigquery_table.hive_table is still 0; calling provider "google" for any other minor fixups
+2022/01/17 15:36:05 [TRACE] GRPCProvider: UpgradeResourceState
+2022/01/17 15:36:05 [DEBUG] EvalApply: ProviderMeta config value set
+2022/01/17 15:36:05 [DEBUG] google_bigquery_table.hive_table: applying the planned Delete change
+google_bigquery_table.hive_table: Destroying... [id=projects/msm-groupdata-datalake-dev/datasets/hive_store/tables/messages]
+2022/01/17 15:36:05 [TRACE] GRPCProvider: ApplyResourceChange
+2022-01-17T15:36:05.997Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:05 [INFO] Deleting BigQuery table: projects/msm-groupdata-datalake-dev/datasets/hive_store/tables/messages: timestamp=2022-01-17T15:36:05.997Z
+2022-01-17T15:36:05.997Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:05 [INFO] Instantiating Google Cloud BigQuery client for path https://bigquery.googleapis.com/bigquery/v2/: timestamp=2022-01-17T15:36:05.997Z
+2022-01-17T15:36:05.998Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:05 [DEBUG] Retry Transport: starting RoundTrip retry loop: timestamp=2022-01-17T15:36:05.998Z
+2022-01-17T15:36:05.998Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:05 [DEBUG] Retry Transport: request attempt 0: timestamp=2022-01-17T15:36:05.998Z
+2022-01-17T15:36:05.998Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:05 [DEBUG] Retry Transport: starting RoundTrip retry loop: timestamp=2022-01-17T15:36:05.998Z
+2022-01-17T15:36:05.998Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:05 [DEBUG] Retry Transport: request attempt 0: timestamp=2022-01-17T15:36:05.998Z
+2022-01-17T15:36:05.998Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:05 [WARN] Invalid log level: "DBUG". Defaulting to level: TRACE. Valid levels are: [TRACE DEBUG INFO WARN ERROR]: timestamp=2022-01-17T15:36:05.998Z
+2022-01-17T15:36:05.998Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:05 [DEBUG] Google API Request Details:
+---[ REQUEST ]---------------------------------------
+DELETE /bigquery/v2/projects/msm-groupdata-datalake-dev/datasets/hive_store/tables/messages?alt=json&prettyPrint=false HTTP/1.1
+Host: bigquery.googleapis.com
+User-Agent: google-api-go-client/0.5 Terraform/0.14.9 (+https://www.terraform.io) Terraform-Plugin-SDK/2.5.0 terraform-provider-google/dev
+X-Goog-Api-Client: gl-go/1.16.2 gdcl/20211124
+Accept-Encoding: gzip
+
+
+-----------------------------------------------------: timestamp=2022-01-17T15:36:05.998Z
+2022-01-17T15:36:06.311Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:06 [WARN] Invalid log level: "DBUG". Defaulting to level: TRACE. Valid levels are: [TRACE DEBUG INFO WARN ERROR]: timestamp=2022-01-17T15:36:06.311Z
+2022-01-17T15:36:06.311Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:06 [DEBUG] Google API Response Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/2.0 200 OK
+Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+Cache-Control: private
+Content-Type: application/json; charset=UTF-8
+Date: Mon, 17 Jan 2022 15:36:06 GMT
+Server: ESF
+Vary: Origin
+Vary: X-Origin
+Vary: Referer
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Xss-Protection: 0
+
+{}
+-----------------------------------------------------: timestamp=2022-01-17T15:36:06.311Z
+2022-01-17T15:36:06.311Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:06 [DEBUG] Retry Transport: Stopping retries, last request was successful: timestamp=2022-01-17T15:36:06.311Z
+2022-01-17T15:36:06.311Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:06 [DEBUG] Retry Transport: Returning after 1 attempts: timestamp=2022-01-17T15:36:06.311Z
+2022-01-17T15:36:06.311Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:06 [DEBUG] Retry Transport: Stopping retries, last request was successful: timestamp=2022-01-17T15:36:06.311Z
+2022-01-17T15:36:06.311Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:06 [DEBUG] Retry Transport: Returning after 1 attempts: timestamp=2022-01-17T15:36:06.311Z
+2022/01/17 15:36:06 [TRACE] EvalWriteState: removing state object for google_bigquery_table.hive_table
+google_bigquery_table.hive_table: Destruction complete after 0s
+2022/01/17 15:36:06 [TRACE] statemgr.Filesystem: creating backup snapshot at terraform.tfstate.backup
+2022/01/17 15:36:06 [TRACE] statemgr.Filesystem: state has changed since last snapshot, so incrementing serial to 30
+2022/01/17 15:36:06 [TRACE] statemgr.Filesystem: writing snapshot at terraform.tfstate
+2022/01/17 15:36:06 [TRACE] vertex "google_bigquery_table.hive_table (destroy)": visit complete
+2022/01/17 15:36:06 [TRACE] dag/walk: visiting "google_bigquery_table.hive_table"
+2022/01/17 15:36:06 [TRACE] vertex "google_bigquery_table.hive_table": starting visit (*terraform.NodeApplyableResourceInstance)
+2022/01/17 15:36:06 [TRACE] EvalReadDiff: Read DeleteThenCreate change from plan for google_bigquery_table.hive_table
+2022/01/17 15:36:06 [TRACE] EvalReadState: reading state for google_bigquery_table.hive_table
+2022/01/17 15:36:06 [TRACE] EvalReadState: no state present for google_bigquery_table.hive_table
+2022/01/17 15:36:06 [TRACE] EvalReadDiff: Read DeleteThenCreate change from plan for google_bigquery_table.hive_table
+2022/01/17 15:36:06 [TRACE] Re-validating config for "google_bigquery_table.hive_table"
+2022/01/17 15:36:06 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2022/01/17 15:36:06 [TRACE] GRPCProvider: PlanResourceChange
+2022-01-17T15:36:06.344Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:06 [DEBUG] unable to unmarshal old json - unexpected end of JSON input: timestamp=2022-01-17T15:36:06.344Z
+2022-01-17T15:36:06.345Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:06 [DEBUG] unable to unmarshal json customized diff - unexpected end of JSON input: timestamp=2022-01-17T15:36:06.345Z
+2022-01-17T15:36:06.345Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:06 [DEBUG] comparison of generics hit... not expected: timestamp=2022-01-17T15:36:06.345Z
+2022/01/17 15:36:06 [WARN] Provider "registry.terraform.io/hashicorp/google" produced an invalid plan for google_bigquery_table.hive_table, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .schema: planned value cty.StringVal("[{\"mode\":\"NULLABLE\",\"name\":\"column1\",\"type\":\"STRING\"}]") does not match config value cty.StringVal("  [\n    {\n        \"name\": \"column1\",\n        \"type\": \"STRING\",\n        \"mode\": \"NULLABLE\"\n    }\n]\n")
+      - .external_data_configuration[0].compression: planned value cty.StringVal("NONE") does not match config value cty.NullVal(cty.String)
+2022/01/17 15:36:06 [TRACE] EvalDiff: google_bigquery_table.hive_table treating Create change as DeleteThenCreate change to match with earlier plan
+2022/01/17 15:36:06 [TRACE] EvalCheckPlannedChange: Verifying that actual change (action DeleteThenCreate) matches planned change (action DeleteThenCreate)
+2022/01/17 15:36:06 [TRACE] EvalReadState: reading state for google_bigquery_table.hive_table
+2022/01/17 15:36:06 [TRACE] EvalReadState: no state present for google_bigquery_table.hive_table
+2022/01/17 15:36:06 [TRACE] EvalReduceDiff: google_bigquery_table.hive_table change simplified from DeleteThenCreate to Create for apply node
+google_bigquery_table.hive_table: Creating...
+2022/01/17 15:36:06 [DEBUG] EvalApply: ProviderMeta config value set
+2022/01/17 15:36:06 [DEBUG] google_bigquery_table.hive_table: applying the planned Create change
+2022/01/17 15:36:06 [TRACE] GRPCProvider: ApplyResourceChange
+2022-01-17T15:36:06.348Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:06 [DEBUG] unable to unmarshal old json - unexpected end of JSON input: timestamp=2022-01-17T15:36:06.348Z
+2022-01-17T15:36:06.348Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:06 [INFO] Creating BigQuery table: messages: timestamp=2022-01-17T15:36:06.348Z
+2022-01-17T15:36:06.348Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:06 [INFO] Instantiating Google Cloud BigQuery client for path https://bigquery.googleapis.com/bigquery/v2/: timestamp=2022-01-17T15:36:06.348Z
+2022-01-17T15:36:06.349Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:06 [DEBUG] Retry Transport: starting RoundTrip retry loop: timestamp=2022-01-17T15:36:06.349Z
+2022-01-17T15:36:06.349Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:06 [DEBUG] Retry Transport: request attempt 0: timestamp=2022-01-17T15:36:06.349Z
+2022-01-17T15:36:06.349Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:06 [DEBUG] Retry Transport: starting RoundTrip retry loop: timestamp=2022-01-17T15:36:06.349Z
+2022-01-17T15:36:06.349Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:06 [DEBUG] Retry Transport: request attempt 0: timestamp=2022-01-17T15:36:06.349Z
+2022-01-17T15:36:06.349Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:06 [WARN] Invalid log level: "DBUG". Defaulting to level: TRACE. Valid levels are: [TRACE DEBUG INFO WARN ERROR]: timestamp=2022-01-17T15:36:06.349Z
+2022-01-17T15:36:06.349Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:06 [DEBUG] Google API Request Details:
+---[ REQUEST ]---------------------------------------
+POST /bigquery/v2/projects/msm-groupdata-datalake-dev/datasets/hive_store/tables?alt=json&prettyPrint=false HTTP/1.1
+Host: bigquery.googleapis.com
+User-Agent: google-api-go-client/0.5 Terraform/0.14.9 (+https://www.terraform.io) Terraform-Plugin-SDK/2.5.0 terraform-provider-google/dev
+Content-Length: 488
+Content-Type: application/json
+X-Goog-Api-Client: gl-go/1.16.2 gdcl/20211124
+Accept-Encoding: gzip
+
+{
+ "externalDataConfiguration": {
+  "compression": "NONE",
+  "hivePartitioningOptions": {
+   "mode": "CUSTOM",
+   "sourceUriPrefix": "gs://msm-groupdata-datalake-dev-bucket/publish/{dt:STRING}/{hr:STRING}/{min:STRING}"
+  },
+  "sourceFormat": "NEWLINE_DELIMITED_JSON",
+  "sourceUris": [
+   "gs://msm-groupdata-datalake-dev-bucket/publish/*"
+  ]
+ },
+ "schema": {
+  "fields": [
+   {
+    "mode": "NULLABLE",
+    "name": "column1",
+    "type": "STRING"
+   }
+  ]
+ },
+ "tableReference": {
+  "datasetId": "hive_store",
+  "projectId": "msm-groupdata-datalake-dev",
+  "tableId": "messages"
+ }
+}
+
+-----------------------------------------------------: timestamp=2022-01-17T15:36:06.349Z
+2022-01-17T15:36:06.609Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:06 [WARN] Invalid log level: "DBUG". Defaulting to level: TRACE. Valid levels are: [TRACE DEBUG INFO WARN ERROR]: timestamp=2022-01-17T15:36:06.609Z
+2022-01-17T15:36:06.609Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:06 [DEBUG] Google API Response Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/2.0 200 OK
+Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+Cache-Control: private
+Content-Type: application/json; charset=UTF-8
+Date: Mon, 17 Jan 2022 15:36:06 GMT
+Etag: duWyD1oEV6PryY9zD9SsAw==
+Server: ESF
+Vary: Origin
+Vary: X-Origin
+Vary: Referer
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Xss-Protection: 0
+
+{
+ "kind": "bigquery#table",
+ "etag": "duWyD1oEV6PryY9zD9SsAw==",
+ "id": "msm-groupdata-datalake-dev:hive_store.messages",
+ "selfLink": "https://bigquery.googleapis.com/bigquery/v2/projects/msm-groupdata-datalake-dev/datasets/hive_store/tables/messages",
+ "tableReference": {
+  "projectId": "msm-groupdata-datalake-dev",
+  "datasetId": "hive_store",
+  "tableId": "messages"
+ },
+ "schema": {
+  "fields": [
+   {
+    "name": "column1",
+    "type": "STRING",
+    "mode": "NULLABLE"
+   },
+   {
+    "name": "dt",
+    "type": "STRING",
+    "mode": "NULLABLE"
+   },
+   {
+    "name": "hr",
+    "type": "STRING",
+    "mode": "NULLABLE"
+   },
+   {
+    "name": "min",
+    "type": "STRING",
+    "mode": "NULLABLE"
+   }
+  ]
+ },
+ "numBytes": "0",
+ "numLongTermBytes": "0",
+ "numRows": "0",
+ "creationTime": "1642433766422",
+ "lastModifiedTime": "1642433766536",
+ "type": "EXTERNAL",
+ "externalDataConfiguration": {
+  "sourceUris": [
+   "gs://msm-groupdata-datalake-dev-bucket/publish/*"
+  ],
+  "sourceFormat": "NEWLINE_DELIMITED_JSON",
+  "compression": "NONE",
+  "hivePartitioningOptions": {
+   "mode": "CUSTOM",
+   "sourceUriPrefix": "gs://msm-groupdata-datalake-dev-bucket/publish/{dt:STRING}/{hr:STRING}/{min:STRING}",
+   "fields": [
+    "dt",
+    "hr",
+    "min"
+   ]
+  }
+ },
+ "location": "EU"
+}
+-----------------------------------------------------: timestamp=2022-01-17T15:36:06.609Z
+2022-01-17T15:36:06.609Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:06 [DEBUG] Retry Transport: Stopping retries, last request was successful: timestamp=2022-01-17T15:36:06.609Z
+2022-01-17T15:36:06.609Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:06 [DEBUG] Retry Transport: Returning after 1 attempts: timestamp=2022-01-17T15:36:06.609Z
+2022-01-17T15:36:06.609Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:06 [DEBUG] Retry Transport: Stopping retries, last request was successful: timestamp=2022-01-17T15:36:06.609Z
+2022-01-17T15:36:06.609Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:06 [DEBUG] Retry Transport: Returning after 1 attempts: timestamp=2022-01-17T15:36:06.609Z
+2022-01-17T15:36:06.609Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:06 [INFO] BigQuery table msm-groupdata-datalake-dev:hive_store.messages has been created: timestamp=2022-01-17T15:36:06.609Z
+2022-01-17T15:36:06.609Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:06 [INFO] Reading BigQuery table: projects/msm-groupdata-datalake-dev/datasets/hive_store/tables/messages: timestamp=2022-01-17T15:36:06.609Z
+2022-01-17T15:36:06.609Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:06 [INFO] Instantiating Google Cloud BigQuery client for path https://bigquery.googleapis.com/bigquery/v2/: timestamp=2022-01-17T15:36:06.609Z
+2022-01-17T15:36:06.610Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:06 [DEBUG] Retry Transport: starting RoundTrip retry loop: timestamp=2022-01-17T15:36:06.610Z
+2022-01-17T15:36:06.610Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:06 [DEBUG] Retry Transport: request attempt 0: timestamp=2022-01-17T15:36:06.610Z
+2022-01-17T15:36:06.610Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:06 [DEBUG] Retry Transport: starting RoundTrip retry loop: timestamp=2022-01-17T15:36:06.610Z
+2022-01-17T15:36:06.610Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:06 [DEBUG] Retry Transport: request attempt 0: timestamp=2022-01-17T15:36:06.610Z
+2022-01-17T15:36:06.610Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:06 [WARN] Invalid log level: "DBUG". Defaulting to level: TRACE. Valid levels are: [TRACE DEBUG INFO WARN ERROR]: timestamp=2022-01-17T15:36:06.610Z
+2022-01-17T15:36:06.610Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:06 [DEBUG] Google API Request Details:
+---[ REQUEST ]---------------------------------------
+GET /bigquery/v2/projects/msm-groupdata-datalake-dev/datasets/hive_store/tables/messages?alt=json&prettyPrint=false HTTP/1.1
+Host: bigquery.googleapis.com
+User-Agent: google-api-go-client/0.5 Terraform/0.14.9 (+https://www.terraform.io) Terraform-Plugin-SDK/2.5.0 terraform-provider-google/dev
+X-Goog-Api-Client: gl-go/1.16.2 gdcl/20211124
+Accept-Encoding: gzip
+
+
+-----------------------------------------------------: timestamp=2022-01-17T15:36:06.610Z
+2022-01-17T15:36:06.741Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:06 [WARN] Invalid log level: "DBUG". Defaulting to level: TRACE. Valid levels are: [TRACE DEBUG INFO WARN ERROR]: timestamp=2022-01-17T15:36:06.741Z
+2022-01-17T15:36:06.741Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:06 [DEBUG] Google API Response Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/2.0 200 OK
+Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000,h3-Q050=":443"; ma=2592000,h3-Q046=":443"; ma=2592000,h3-Q043=":443"; ma=2592000,quic=":443"; ma=2592000; v="46,43"
+Cache-Control: private
+Content-Type: application/json; charset=UTF-8
+Date: Mon, 17 Jan 2022 15:36:06 GMT
+Etag: duWyD1oEV6PryY9zD9SsAw==
+Server: ESF
+Vary: Origin
+Vary: X-Origin
+Vary: Referer
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Xss-Protection: 0
+
+{
+ "kind": "bigquery#table",
+ "etag": "duWyD1oEV6PryY9zD9SsAw==",
+ "id": "msm-groupdata-datalake-dev:hive_store.messages",
+ "selfLink": "https://bigquery.googleapis.com/bigquery/v2/projects/msm-groupdata-datalake-dev/datasets/hive_store/tables/messages",
+ "tableReference": {
+  "projectId": "msm-groupdata-datalake-dev",
+  "datasetId": "hive_store",
+  "tableId": "messages"
+ },
+ "schema": {
+  "fields": [
+   {
+    "name": "column1",
+    "type": "STRING",
+    "mode": "NULLABLE"
+   },
+   {
+    "name": "dt",
+    "type": "STRING",
+    "mode": "NULLABLE"
+   },
+   {
+    "name": "hr",
+    "type": "STRING",
+    "mode": "NULLABLE"
+   },
+   {
+    "name": "min",
+    "type": "STRING",
+    "mode": "NULLABLE"
+   }
+  ]
+ },
+ "numBytes": "0",
+ "numLongTermBytes": "0",
+ "numRows": "0",
+ "creationTime": "1642433766422",
+ "lastModifiedTime": "1642433766536",
+ "type": "EXTERNAL",
+ "externalDataConfiguration": {
+  "sourceUris": [
+   "gs://msm-groupdata-datalake-dev-bucket/publish/*"
+  ],
+  "sourceFormat": "NEWLINE_DELIMITED_JSON",
+  "compression": "NONE",
+  "hivePartitioningOptions": {
+   "mode": "CUSTOM",
+   "sourceUriPrefix": "gs://msm-groupdata-datalake-dev-bucket/publish/{dt:STRING}/{hr:STRING}/{min:STRING}",
+   "fields": [
+    "dt",
+    "hr",
+    "min"
+   ]
+  }
+ },
+ "location": "EU"
+}
+-----------------------------------------------------: timestamp=2022-01-17T15:36:06.741Z
+2022-01-17T15:36:06.741Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:06 [DEBUG] Retry Transport: Stopping retries, last request was successful: timestamp=2022-01-17T15:36:06.741Z
+2022-01-17T15:36:06.741Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:06 [DEBUG] Retry Transport: Returning after 1 attempts: timestamp=2022-01-17T15:36:06.741Z
+2022-01-17T15:36:06.741Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:06 [DEBUG] Retry Transport: Stopping retries, last request was successful: timestamp=2022-01-17T15:36:06.741Z
+2022-01-17T15:36:06.741Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:06 [DEBUG] Retry Transport: Returning after 1 attempts: timestamp=2022-01-17T15:36:06.741Z
+2022/01/17 15:36:06 [WARN] Provider "registry.terraform.io/hashicorp/google" produced an unexpected new value for google_bigquery_table.hive_table, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .description: was null, but now cty.StringVal("")
+      - .schema: was cty.StringVal("[{\"mode\":\"NULLABLE\",\"name\":\"column1\",\"type\":\"STRING\"}]"), but now cty.StringVal("[{\"mode\":\"NULLABLE\",\"name\":\"column1\",\"type\":\"STRING\"},{\"mode\":\"NULLABLE\",\"name\":\"dt\",\"type\":\"STRING\"},{\"mode\":\"NULLABLE\",\"name\":\"hr\",\"type\":\"STRING\"},{\"mode\":\"NULLABLE\",\"name\":\"min\",\"type\":\"STRING\"}]")
+      - .friendly_name: was null, but now cty.StringVal("")
+      - .external_data_configuration[0].max_bad_records: was null, but now cty.NumberIntVal(0)
+      - .external_data_configuration[0].ignore_unknown_values: was null, but now cty.False
+2022/01/17 15:36:06 [TRACE] EvalWriteState: recording 3 dependencies for google_bigquery_table.hive_table
+2022/01/17 15:36:06 [TRACE] EvalWriteState: writing current state object for google_bigquery_tgoogle_bigquery_table.hive_table: Creation complete after 1s [id=projects/msm-groupdata-datalake-dev/datasets/hive_store/tables/messages]
+able.hive_table
+2022/01/17 15:36:06 [TRACE] EvalWriteState: recording 3 dependencies for google_bigquery_table.hive_table
+2022/01/17 15:36:06 [TRACE] EvalWriteState: writing current state object for google_bigquery_table.hive_table
+2022/01/17 15:36:06 [TRACE] statemgr.Filesystem: have already backed up original terraform.tfstate to terraform.tfstate.backup on a previous write
+2022/01/17 15:36:06 [TRACE] statemgr.Filesystem: state has changed since last snapshot, so incrementing serial to 31
+2022/01/17 15:36:06 [TRACE] statemgr.Filesystem: writing snapshot at terraform.tfstate
+2022/01/17 15:36:06 [TRACE] vertex "google_bigquery_table.hive_table": visit complete
+2022/01/17 15:36:06 [TRACE] dag/walk: visiting "meta.count-boundary (EachMode fixup)"
+2022/01/17 15:36:06 [TRACE] vertex "meta.count-boundary (EachMode fixup)": starting visit (*terraform.NodeCountBoundary)
+2022/01/17 15:36:06 [TRACE] dag/walk: visiting "provider[\"registry.terraform.io/hashicorp/google\"] (close)"
+2022/01/17 15:36:06 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/google\"] (close)": starting visit (*terraform.graphNodeCloseProvider)
+2022/01/17 15:36:06 [TRACE] GRPCProvider: Close
+2022/01/17 15:36:06 [TRACE] vertex "meta.count-boundary (EachMode fixup)": visit complete
+2022-01-17T15:36:06.773Z [WARN]  plugin.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = transport is closing"
+2022-01-17T15:36:06.773Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:06 [WARN] Invalid log level: "DBUG". Defaulting to level: TRACE. Valid levels are: [TRACE DEBUG INFO WARN ERROR]: timestamp=2022-01-17T15:36:06.773Z
+2022-01-17T15:36:06.774Z [INFO]  plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:06 [WARN] Invalid log level: "DBUG". Defaulting to level: TRACE. Valid levels are: [TRACE DEBUG INFO WARN ERROR]: timestamp=2022-01-17T15:36:06.774Z
+2022-01-17T15:36:06.774Z [DEBUG] plugin.terraform-provider-google_v4.5.0_x5: 2022/01/17 15:36:06 [DEBUG] [transport] transport: http2Server.HandleStreams failed to read frame: read unix /var/folders/6y/709fn7mx2_q8r5br55hztqnw0000gp/T/plugin008543024->: use of closed network connection
+2022-01-17T15:36:06.778Z [DEBUG] plugin: plugin process exited: path=.terraform/providers/registry.terraform.io/hashicorp/google/4.5.0/darwin_amd64/terraform-provider-google_v4.5.0_x5 pid=54101
+2022-01-17T15:36:06.778Z [DEBUG] plugin: plugin exited
+2022/01/17 15:36:06 [TRACE] vertex "provider[\"registry.terraform.io/hashicorp/google\"] (close)": visit complete
+2022/01/17 15:36:06 [TRACE] dag/walk: visiting "root"
+2022/01/17 15:36:06 [TRACE] vertex "root": starting visit (*terraform.nodeCloseModule)
+2022/01/17 15:36:06 [TRACE] vertex "root": visit complete
+2022/01/17 15:36:06 [TRACE] statemgr.Filesystem: have already backed up original terraform.tfstate to terraform.tfstate.backup on a previous write
+2022/01/17 15:36:06 [TRACE] statemgr.Filesystem: state has changed since last snapshot, so incrementing serial to 32
+2022/01/17 15:36:06 [TRACE] statemgr.Filesystem: writing snapshot at terraform.tfstate
+
+2022/01/17 15:36:06 [TRACE] statemgr.Filesystem: removing lock metadata file .terraform.tfstate.lock.info
+Apply complete! Resources: 1 added, 0 changed, 1 destroyed.
+2022/01/17 15:36:06 [TRACE] statemgr.Filesystem: unlocking terraform.tfstate using fcntl flock
