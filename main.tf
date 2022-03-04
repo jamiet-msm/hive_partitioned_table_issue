@@ -49,6 +49,15 @@ resource "google_bigquery_table" "hive_table" {
   table_id            = "messages"
   deletion_protection = false
   external_data_configuration {
+    schema = <<EOF
+    [
+        {
+            "name": "column1",
+            "type": "STRING",
+            "mode": "NULLABLE"
+        }
+    ]
+  EOF
     autodetect    = false
     source_uris   = ["gs://${google_storage_bucket.bucket.name}/publish/*"]
     source_format = "NEWLINE_DELIMITED_JSON"
@@ -58,15 +67,6 @@ resource "google_bigquery_table" "hive_table" {
       require_partition_filter = false
     }
   }
-  schema = <<EOF
-  [
-    {
-        "name": "column1",
-        "type": "STRING",
-        "mode": "NULLABLE"
-    }
-]
-  EOF
   depends_on = [
     google_storage_bucket_object.fake_message
   ]
