@@ -64,21 +64,6 @@ resource "google_bigquery_table" "hive_table" {
         "name": "column1",
         "type": "STRING",
         "mode": "NULLABLE"
-    },
-    {
-        "mode": "NULLABLE",
-        "name": "dt",
-        "type": "STRING"
-    },
-    {
-        "mode": "NULLABLE",
-        "name": "hr",
-        "type": "STRING"
-    },
-    {
-        "mode": "NULLABLE",
-        "name": "min",
-        "type": "STRING"
     }
 ]
   EOF
